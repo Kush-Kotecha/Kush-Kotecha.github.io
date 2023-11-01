@@ -1,2 +1,2 @@
-# Kush-Kotecha.github.io poo
+# Kush-Kotecha.github.io
  
