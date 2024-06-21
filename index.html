@@ -1,7 +1,593 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<body>
-		<h1>Hello World</h1>
-		<p>This web page is hosted using GitHub</p>
-	</body>
+
+<style>
+
+	*{
+	font-family: Georgia, Times New Roman, serif;}
+	
+	.navi {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  font-size: 18px;
+	  min-height: 48px;
+	  background-color: #808080;
+	  position: sticky;
+	  position: -webkit-sticky;
+	  top: 0;
+	  width: 100%;
+	  z-index: 100;
+	}
+	
+	.banner {
+	 width: 100%;
+	 height: 300px;
+	 overflow:hidden;
+	}
+	
+	.banner img {
+	transition: scale 1s ease-in-out;
+	transform-origin: 30% 40%;
+	}
+
+	.banner:hover img{
+     scale: 3;
+	}
+
+	.navi li {
+	  float: right;
+	}
+
+	.navi li a, .dropbtn {
+	  display: block;
+	  color: black;
+	  text-align: center;
+	  padding: 13.5px 18px;
+	  text-decoration: none;
+	  border-right: 1px solid #bbb;
+	}
+
+	.navi li a:hover {
+	  background-color: #555555;
+	}
+
+	.dropdown li {
+	  position: fixed;
+	  display: in-line block;
+	  z-index:10
+	}
+
+	.dropdown-content {
+	  display: none;
+	  position: relative;
+	  background-color: #e2e2e2;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 10;
+	}
+
+	.dropdown-content a {
+	  position: relative;
+	  color: black;
+	  padding: 0:
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	  font-size: 18px;
+	  background-color: #f5f5f5;
+	}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+	.navi .nondrop :active, .active {
+	  background-color: #333;
+	  color: #cca01d;
+	}
+	
+	.navi .dropdown-content :active {
+	  background-color: #333;
+	  color: #cca01d;
+	}
+	
+	.bl {
+	 box-shadow: 8px 5px 4px -4px rgba(0,0,0,0.3) inset;
+	 width: 950px;
+	 rotate: 180deg;
+	 position: relative;
+
+	}
+	
+	.blt {
+	 box-shadow: 8px 0px 4px -4px rgba(0,0,0,0.3) inset;
+	 width: 950px;
+	 rotate: 180deg;
+	 position: relative;
+
+	}
+	
+	.bl p, .blt p {
+	 padding-right: 30px;
+	 padding-left: 30px;
+	}
+	
+	.bl a, .blt a {
+	 color: blue;
+	}
+	
+	.b2 {
+	 box-shadow: 8px 0px 4px -4px rgba(0,0,0,0.3) inset;
+	 width: 950px;
+	 rotate: 180deg;
+	 position: relative;
+	 z-index: -10;
+	}
+	
+	.b2t {
+	 box-shadow: 8px 5px 4px -4px rgba(0,0,0,0.3) inset;
+	 width: 950px;
+	 rotate: 180deg;
+	 position: relative;
+	 z-index: -10;
+	}
+	
+	.tt {
+	  position: relative;
+	  display: inline-block;
+	  color: blue;
+	  border-bottom: 1px dotted blue; /* If you want dots under the hoverable text */
+	}
+
+	.tt .disstt {
+	  visibility: hidden;
+	  width: 600px;
+	  height: 200px;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+	  background-color: #555;
+	  color: #fff;
+	  text-align: left;
+	  padding: 5px 5px;
+	  border-radius: 6px;
+
+	  /* Position the tooltip text */
+	  position: absolute;
+	  z-index: 1;
+	  top: 125%;
+	  left: 50%;
+	  margin-left: -300px;
+
+	  /* Fade in tooltip */
+	  opacity: 0;
+	  transition: opacity 0.3s;
+	}
+	
+	.tt .disstt::after {
+	  content: "";
+	  position: absolute;
+	  top: 125%
+	  left: 50%;
+	  margin-left: -300px;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: #555 transparent transparent transparent;
+	}
+
+	.tt:hover .disstt {
+	  visibility: visible;
+	  opacity: 1;
+	}
+	
+</style>
+
+<head>
+</head>
+
+<body>
+	<script type="text/javascript">
+	
+	let ide = "a1";
+	let co = 0;
+	let inv = "n";
+	let lg = "n";
+	let ide2 = null;
+	let col = null;
+	let dro = "n";
+	let btim = 200;
+
+	function invert() {
+		if (inv == "n")
+			{inv = "y";
+			txChange();
+			 document.getElementById("d1").style.backgroundColor = "purple";
+			 document.getElementById("a5").style.backgroundColor = "purple";
+			 document.getElementById("a4").style.backgroundColor = "purple";
+			 document.getElementById("a3").style.backgroundColor = "purple";
+			 document.getElementById("a2").style.backgroundColor = "purple";
+			 document.getElementById("a1").style.backgroundColor = "purple";
+			 document.getElementById("a5").style.color = "#efefef";
+			 document.getElementById("a4").style.color = "#efefef";
+			 document.getElementById("a3").style.color = "#efefef";
+			 document.getElementById("a2").style.color = "#efefef";
+			 document.getElementById("a1").style.color = "#efefef";
+			 document.getElementById("dc1a").style.backgroundColor = "#555555";
+			 document.getElementById("dc1b").style.backgroundColor = "#555555";
+			 document.getElementById("dc2a").style.backgroundColor = "#555555";
+			 document.getElementById("dc2b").style.backgroundColor = "#555555";
+			 document.getElementById("dc2c").style.backgroundColor = "#555555";
+			 document.getElementById("dc3a").style.backgroundColor = "#555555";
+			 document.getElementById("dc3b").style.backgroundColor = "#555555";
+			 document.getElementById("dc1a").style.color = "#efefef";
+			 document.getElementById("dc1b").style.color = "#efefef";
+			 document.getElementById("dc2a").style.color = "#efefef";
+			 document.getElementById("dc2b").style.color = "#efefef";
+			 document.getElementById("dc2c").style.color = "#efefef";
+			 document.getElementById("dc3a").style.color = "#efefef";
+			 document.getElementById("dc3b").style.color = "#efefef";
+			 document.getElementById(ide2).style.color = "white";
+			 document.body.style.backgroundColor = "#003153";
+			 document.body.style.color = "#efefef";
+			 document.getElementById("em").style.color = "yellow";
+			 document.getElementById("li1").style.color = "yellow";
+			 document.getElementById("li1").style.borderBottom = "1px dotted yellow";
+			 if (co!=0) {
+			 document.getElementById(ide).style.backgroundColor = "#333";
+			 document.getElementById(ide).style.color = "#ffa3d1";}
+			 }
+		else
+			{inv = "n";
+			txChange();
+			 document.getElementById("d1").style.backgroundColor = "";
+			 document.getElementById("a5").style.backgroundColor = "";
+			 document.getElementById("a4").style.backgroundColor = "";
+			 document.getElementById("a3").style.backgroundColor = "";
+			 document.getElementById("a2").style.backgroundColor = "";
+			 document.getElementById("a1").style.backgroundColor = "";
+			 document.getElementById("a5").style.color = "";
+			 document.getElementById("a4").style.color = "";
+			 document.getElementById("a3").style.color = "";
+			 document.getElementById("a2").style.color = "";
+			 document.getElementById("a1").style.color = "";
+			 document.getElementById("dc1a").style.backgroundColor = "";
+			 document.getElementById("dc1b").style.backgroundColor = "";
+			 document.getElementById("dc2a").style.backgroundColor = "";
+			 document.getElementById("dc2b").style.backgroundColor = "";
+			 document.getElementById("dc2c").style.backgroundColor = "";
+			 document.getElementById("dc3a").style.backgroundColor = "";
+			 document.getElementById("dc3a").style.backgroundColor = "";
+			 document.getElementById("dc3b").style.backgroundColor = "";
+			 document.getElementById("dc1a").style.color = "";
+			 document.getElementById("dc1b").style.color = "";
+			 document.getElementById("dc2a").style.color = "";
+			 document.getElementById("dc2b").style.color = "";
+			 document.getElementById("dc2c").style.color = "";
+			 document.getElementById("dc3a").style.color = "";
+			 document.getElementById("dc3b").style.color = "";
+			 document.body.style.backgroundColor = "";
+			 document.body.style.color = "";
+			 document.getElementById("em").style.color = "";	
+			 document.getElementById("li1").style.color = "";
+			 document.getElementById("li1").style.borderBottom = "";
+			 document.getElementById(ide2).style.backgroundColor = "#333";
+			 document.getElementById(ide2).style.color = "#ffa3d1";
+			 const myTimeout = setTimeout(ret2, btim);
+			 
+			 if (co!=0) {
+			 document.getElementById(ide).style.backgroundColor = "#333";
+			 document.getElementById(ide).style.color = "#cca01d";}
+			 }
+	}
+	
+	function txChange() {
+			if (lg=="n" && inv == "y") {
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can increase the text size on the right side of the navigation bar";
+			 }
+			 if (lg=="n" && inv == "n") {
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page and increase the text size on the right side of the navigation bar";
+			 }
+			 if (lg=="y" && inv == "n") {
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page on the right side of the navigation bar";
+			 }
+			 if (lg=="y" && inv == "y") {
+			    document.getElementById("acc").style.display = "none";
+				document.getElementById("wo").style.display = "none";
+				document.getElementById("wo1").style.display = "none";
+				document.getElementById("cla1").style.boxShadow = "8px 0px 4px -4px rgba(0,0,0,0.3) inset";
+				document.getElementById("cla2").style.boxShadow = "8px 0px 4px -4px rgba(0,0,0,0.3) inset";
+			 }
+			 else {
+			 	document.getElementById("acc").style.display = "";
+				document.getElementById("wo").style.display = "";
+				document.getElementById("wo1").style.display = "";
+				document.getElementById("cla1").style.boxShadow = "";
+				document.getElementById("cla2").style.boxShadow = "";
+				
+			 }
+
+	}
+	
+	function hon() {
+	   if (inv == "y") {
+	       document.getElementById(ide2).style.backgroundColor = "#9f9f9f";}}
+		   
+	function hoff() {
+		if (inv == "y") {
+		if (ide==ide2 && co!=0) {
+	       document.getElementById(ide2).style.backgroundColor = "#333";}
+		else if (dro=="y")
+		{document.getElementById(ide2).style.backgroundColor = "#555555";
+		 document.getElementById(ide2).style.color = "white"}
+		else {document.getElementById(ide2).style.backgroundColor = "purple";}
+		}}
+	
+	function hn4() {
+		ide2 = "a4";
+		dro = "n";
+		hon();}
+		
+	function hn3() {
+		ide2 = "a3";
+		dro = "n";
+		hon();}
+		
+	function hn2() {
+		ide2 = "a2";
+		dro = "n";
+		hon();}
+		
+	function hn1() {
+		ide2 = "a1";
+		dro = "n";
+		hon();}
+		
+	function dcn1a(){
+		ide2 = "dc1a";
+		dro = "y";
+		hon();}
+		
+	function dcn1b(){
+		ide2 = "dc1b";
+		dro = "y";
+		hon();}
+		
+	function dcn2a(){
+		ide2 = "dc2a";
+		dro = "y";
+		hon();}
+		
+	function dcn2b(){
+		ide2 = "dc2b";
+		dro = "y";
+		hon();}
+		
+	function dcn2c(){
+		ide2 = "dc2c";
+		dro = "y";
+		hon();}
+		
+	function dcn3a(){
+		ide2 = "dc3a";
+		dro = "y";
+		hon();}
+		
+	function dcn3b(){
+		ide2 = "dc3b";
+		dro = "y";
+		hon();}
+	
+	function lgtext() {
+	if (inv == "y"){
+		document.getElementById(ide2).style.backgroundColor = "#333";
+		document.getElementById(ide2).style.color = "#ffa3d1";
+		const myTimeout = setTimeout(ret, btim);}
+	if (lg == "n")
+		{lg = "y";
+		txChange();
+	    document.body.style.fontSize = "20px";}
+	else
+		{lg = "n";
+		 txChange();
+		 document.body.style.fontSize = "";}
+	}
+	
+	function c4() {
+	if (co==0){co=1;
+	ide="a4"}
+	if (inv == "n"){
+		document.getElementById(ide).style.backgroundColor = ""
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "";
+		document.getElementById("a4").style.backgroundColor = "#333";
+		document.getElementById("a4").style.color = "#cca01d";
+		ide = "a4";}
+	else if (inv == "y"){
+		document.getElementById(ide).style.backgroundColor = "purple";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "white";
+		document.getElementById("a4").style.backgroundColor = "#333";
+		document.getElementById("a4").style.color = "#ffa3d1";
+		ide = "a4";
+	}}
+	
+	function c3() {
+	if (co==0){co=1;
+	ide="a3"}
+	if (inv == "n"){
+		document.getElementById(ide).style.backgroundColor = "";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "";
+		document.getElementById("a3").style.backgroundColor = "#333";
+		document.getElementById("a3").style.color = "#cca01d";
+		ide = "a3";}
+	else {
+		document.getElementById(ide2).style.backgroundColor = "#333";
+		document.getElementById(ide2).style.color = "#ffa3d1";
+		const myTimeout = setTimeout(ret, btim);
+		document.getElementById(ide).style.backgroundColor = "purple";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "white";
+		document.getElementById("a3").style.backgroundColor = "#333";
+		document.getElementById("a3").style.color = "#ffa3d1";
+		ide = "a3";
+	}}
+	
+	function ret() {
+		document.getElementById(ide2).style.backgroundColor = "#555555";
+		document.getElementById(ide2).style.color = "white";}
+	
+	function ret2() {
+		document.getElementById(ide2).style.backgroundColor = "";
+		document.getElementById(ide2).style.color = "";}
+	
+	function c2() {
+	if (co==0){co=1;
+	ide="a2"}
+	if (inv == "n"){
+		document.getElementById(ide).style.backgroundColor = "";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "";
+		document.getElementById("a2").style.backgroundColor = "#333";
+		document.getElementById("a2").style.color = "#cca01d";
+		ide = "a2";}
+	else {
+		document.getElementById(ide2).style.backgroundColor = "#333";
+		document.getElementById(ide2).style.color = "#ffa3d1";
+		const myTimeout = setTimeout(ret, btim);
+		document.getElementById(ide).style.backgroundColor = "purple";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "white";
+		document.getElementById("a2").style.backgroundColor = "#333";
+		document.getElementById("a2").style.color = "#ffa3d1";
+		ide = "a2";
+		if (document.getElementById("wo").style.display == "none") {
+		 document.getElementById("dc3a").href = "#wo2";}
+		else {document.getElementById("dc3a").href = "#wo";}
+	}}
+	
+	function c1() {
+	if (co==0){co=1;
+	ide="a1"}
+	if (inv == "n"){
+		document.getElementById(ide).style.backgroundColor = "";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "";
+		document.getElementById("a1").style.backgroundColor = "#333";
+		document.getElementById("a1").style.color = "#cca01d";
+		ide = "a1";}
+	else {
+		document.getElementById(ide).style.backgroundColor = "purple";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "white";
+		document.getElementById("a1").style.backgroundColor = "#333";
+		document.getElementById("a1").style.color = "#ffa3d1";
+		ide = "a1";
+	}}
+	
+	function cide() {
+		if (inv == "n"){
+		document.getElementById(ide).style.backgroundColor = "";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "";}
+		else {
+		document.getElementById(ide).style.backgroundColor = "purple";
+		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.color = "white";}
+	ide = "a2";
+	scr();}
+	
+	function scr() {
+	if (inv == "n"){
+		document.getElementById(ide).style.backgroundColor = "#333";
+		document.getElementById(ide).style.color = "#cca01d";}
+	else {
+		document.getElementById(ide).style.backgroundColor = "#333";
+		document.getElementById(ide).style.color = "#ffa3d1";
+	}}
+	
+	document.getElementById("dc1a").addEventListener("click", invert());
+	document.getElementById("dc1b").addEventListener("click", lgtext());
+	document.getElementById("wo").addEventListener("scroll", cide());
+	</script>
+
+	<div class="banner"><img src="Knight.jpg" alt="Knights on horseback" width="100%" height="300"></div>
+	<div id="d1" class="navi">
+	  <li id="l1" class="dropdown" style="float:left">
+	      <a id="a5" class="dropbtn">Accessibility</a>
+		  <div class="dropdown-content">
+			<a id="dc1a" onclick="invert()" onmouseover="dcn1a()" onmouseout="hoff()" style="border-right: initial; cursor: pointer">Invert Colours</a>
+			<a id="dc1b" onclick = "lgtext()" onmouseover="dcn1b()" onmouseout="hoff()" style="border-right: initial; cursor: pointer">Large Text</a>
+		  </div>
+	  </li>
+	  <li id="l2" class="nondrop" onmouseover="hn4()" onmouseout="hoff()"><a id="a4" onclick="c4()" href="#home" style="border-right: initial">CV</a></li>
+	  <li id="l3" class="dropdown">
+		<a id="a3" onmouseover="hn3()" onmouseout="hoff()" class="dropbtn">Projects</a>
+		<div class="dropdown-content">
+		  <a id="dc2a" href="#pr" onclick="c3()" onmouseover="dcn2a()" onmouseout="hoff()" style="border-right: initial">C#</a>
+		  <a id="dc2b" href="#ma" onclick = "c3()" onmouseover="dcn2b()" onmouseout="hoff()" style="border-right: initial">Matlab</a>
+		  <a id="dc2c" href="#mi" onclick = "c3()" onmouseover="dcn2c()" onmouseout="hoff()" style="border-right: initial">Miscellaneous II.</a>
+		</div>
+	  </li>
+	  <li id="l4" class="dropdown">
+		<a id="a2" class="dropbtn" onmouseover="hn2()" onmouseout="hoff()">Work</a>
+		<div class="dropdown-content">
+		  <a id="dc3a" href="#wo" onclick = "c2()" onmouseover="dcn3a()" onmouseout="hoff()" style="border-right: initial">Dissertation</a>
+		  <a id="dc3b" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial">Miscellaneous I.</a>
+		</div>
+		</li>
+	  <li id="l5" class="nondrop" onmouseover="hn1()" onmouseout="hoff()" ><a id="a1" onclick="c1()" href="#about" style="border-left: 1px solid #bbb">About</a></li>
+	</div>
+
+	<center><div id="cla1" class="bl"><div class="b2">
+	<br><br><br id="about"><br>
+	<h1>About</h1>
+	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng). This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
+	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities. For serious enquiries, please contact me on <a id="em" href="mailto:kush.kotecha38@gmail.com">kush.kotecha38@gmail.com</a></p><br id="wo2"><br><br id="wo1">
+	</div></div></center>
+	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the right-hand side of the navigation bar</h2>
+	<center><div class="blt"><div id="cla2" class="b2t">
+    <br id="wo">
+	<h1 onscroll="cide()" style="padding-top: 30px">Work</h1>
+	<h3>Dissertation</h3>
+	<p>My dissertation topic was <i> Wetting of a Droplet of Aqueous LiTFSI on Graphite Using Molecular Dynamics </i> in relation to energy storage systems.
+	<br><br>The initial report contains a discussion of different energy storage technologies that use aqueous electrolytes along with information on the different components within a supercapacitor.
+	Then there is a comparison of salts used in aqueous electrolytes and a brief look inside the operation of a supercapacitor containing LiTFSI (aq). 
+	<br><br>
+	The dissertation report contains Molecular Dynamics theory (for both background and simulation) and informative instructions on input creation.
+	There are 3 investigations which look at slightly different aspects of the system but all share the same goal of improving electrolyte performance.
+	<div id="li1" class="tt">Hover over this to read the dissertation abstract
+	<span class="disstt">This dissertation aims to understand the wetting properties of aqueous LiTFSI on an uncharged graphite electrode with respect to concentration, temperature, and surface type. Wetting is quantified by the contact angle between the droplet and electrode which is measured graphically using Python and qualitatively evaluated using Young’s Equation.
+	<br><br>A basic introduction to Molecular Dynamics is provided and the theory behind key components of the simulation have been discussed in detail. The procedure for input preparation is given along with all supplementary files required to completely reproduce simulation of a 6 molal droplet at 298K on a flat surface (appendix B).
+	<br><br>The results show that the contact angle of water droplets decreases significantly with the introduction of LiTFSI and then continues to decrease at a more subdued rate as further ions are added. Increasing temperature also causes the contact angle to decrease and evaporation of water further decreases the contact angle. At 75° and 100°C, and an initial concentration of 6.00 molal, perfect wetting is achieved. Contact angle results could not be drawn from the changes in surface however the simulations serve as a preliminary insight into intercalation of LiTFSI between graphite layers.
+	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (no potential difference or reactions modelled). Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
+	</span>
+	</div></p>
+	<br><br id="wo3"><br><br>
+	<h3>Miscellaneous I.</h3>
+	<p>In my final year, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
+	Here is the coursework for USD and SES (USD model and optimise an existing system) ... performed in groups and kept teamwork stuff - parts in GREEN are my individual work.</p>
+	<br><br><br id="pr"><br>
+	<h1>Projects</h1>
+	<h3>MineSS in C#</h3>
+	<p>One great thing about programming is that most personal projects do not have huge financial impacts so you can explore your creativity.
+	This is my rendition of MineSweeper written in C# which contains the normal game along with 6 other game modes. Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
+	<br>Remove your expectations and you might be pleasantly surprised :)
+	<a href="#about">C#</a></p>
+	<br><br><br id="ma"><br>
+	<h3>Matlab</h3>
+	<p>As part of 3rd yr project, modelled PBR with SA options</p>
+	<br><br><br id="mi"><br>
+	<h3>Miscellaneous II.</h3>
+	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+	<br><br><br><br>
+	<h3>Dropdown Menu inside a Navigation Bar</h3>
+	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+	<br><br><br><br>
+	<h3 id="home">Dropdown Menu inside a Navigation Bar</h3>
+	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+	<br><br><br><br>
+	</div></div></center>
+</body>
+
 </html>
