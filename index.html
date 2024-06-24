@@ -115,6 +115,7 @@
 	
 	.bl a, .blt a {
 	 color: blue;
+	 font-style: oblique;
 	}
 	
 	.b2 {
@@ -188,7 +189,7 @@
 <body>
 	<script type="text/javascript">
 	
-	let ide = "a1";
+	let ide = "a4";
 	let co = 0;
 	let inv = "n";
 	let lg = "n";
@@ -230,9 +231,17 @@
 			 document.body.style.backgroundColor = "#003153";
 			 document.body.style.color = "#efefef";
 			 document.getElementById("em").style.color = "yellow";
+			 document.getElementById("li0").style.color = "yellow";
 			 document.getElementById("li1").style.color = "yellow";
 			 document.getElementById("li1").style.borderBottom = "1px dotted yellow";
+			 document.getElementById("li3").style.color = "yellow";
+			 document.getElementById("li4").style.color = "yellow";
+			 document.getElementById("li5").style.color = "yellow";
+			 document.getElementById("li6").style.color = "yellow";
 			 if (co!=0) {
+			 document.getElementById(ide).style.backgroundColor = "#333";
+			 document.getElementById(ide).style.color = "#ffa3d1";}
+			 else if (co==0 && ide!="a4") {
 			 document.getElementById(ide).style.backgroundColor = "#333";
 			 document.getElementById(ide).style.color = "#ffa3d1";}
 			 }
@@ -267,14 +276,22 @@
 			 document.getElementById("dc3b").style.color = "";
 			 document.body.style.backgroundColor = "";
 			 document.body.style.color = "";
-			 document.getElementById("em").style.color = "";	
+			 document.getElementById("em").style.color = "";
+			 document.getElementById("li0").style.color = "";			 
 			 document.getElementById("li1").style.color = "";
 			 document.getElementById("li1").style.borderBottom = "";
+			 document.getElementById("li3").style.color = "";
+			 document.getElementById("li4").style.color = "";
+			 document.getElementById("li5").style.color = "";
+			 document.getElementById("li6").style.color = "";
 			 document.getElementById(ide2).style.backgroundColor = "#333";
 			 document.getElementById(ide2).style.color = "#ffa3d1";
 			 const myTimeout = setTimeout(ret2, btim);
 			 
 			 if (co!=0) {
+			 document.getElementById(ide).style.backgroundColor = "#333";
+			 document.getElementById(ide).style.color = "#cca01d";}	 
+			 else if (co==0 && ide!="a4") {
 			 document.getElementById(ide).style.backgroundColor = "#333";
 			 document.getElementById(ide).style.color = "#cca01d";}
 			 }
@@ -283,27 +300,28 @@
 	function txChange() {
 			if (lg=="n" && inv == "y") {
 			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can increase the text size on the right side of the navigation bar";
+				document.getElementById("a4").href = "KushCVA.pdf";	
 			 }
 			 if (lg=="n" && inv == "n") {
 			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page and increase the text size on the right side of the navigation bar";
+			 	document.getElementById("a4").href = "KushCV.pdf";	
 			 }
 			 if (lg=="y" && inv == "n") {
 			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page on the right side of the navigation bar";
+			    document.getElementById("a4").href = "KushCVL.pdf";
 			 }
 			 if (lg=="y" && inv == "y") {
 			    document.getElementById("acc").style.display = "none";
-				document.getElementById("wo").style.display = "none";
 				document.getElementById("wo1").style.display = "none";
 				document.getElementById("cla1").style.boxShadow = "8px 0px 4px -4px rgba(0,0,0,0.3) inset";
 				document.getElementById("cla2").style.boxShadow = "8px 0px 4px -4px rgba(0,0,0,0.3) inset";
+				document.getElementById("a4").href = "KushCVAL.pdf";
 			 }
 			 else {
 			 	document.getElementById("acc").style.display = "";
-				document.getElementById("wo").style.display = "";
 				document.getElementById("wo1").style.display = "";
 				document.getElementById("cla1").style.boxShadow = "";
-				document.getElementById("cla2").style.boxShadow = "";
-				
+				document.getElementById("cla2").style.boxShadow = "";			
 			 }
 
 	}
@@ -314,7 +332,7 @@
 		   
 	function hoff() {
 		if (inv == "y") {
-		if (ide==ide2 && co!=0) {
+		if (ide==ide2) {
 	       document.getElementById(ide2).style.backgroundColor = "#333";}
 		else if (dro=="y")
 		{document.getElementById(ide2).style.backgroundColor = "#555555";
@@ -394,44 +412,23 @@
 	
 	function c4() {
 	if (co==0){co=1;
-	ide="a4"}
-	if (inv == "n"){
-		document.getElementById(ide).style.backgroundColor = ""
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "";
-		document.getElementById("a4").style.backgroundColor = "#333";
-		document.getElementById("a4").style.color = "#cca01d";
-		ide = "a4";}
-	else if (inv == "y"){
-		document.getElementById(ide).style.backgroundColor = "purple";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "white";
-		document.getElementById("a4").style.backgroundColor = "#333";
-		document.getElementById("a4").style.color = "#ffa3d1";
-		ide = "a4";
-	}}
+	revo();
+	ide="a4";}
+	revo();
+	ide = "a4";
+	hig();}
 	
 	function c3() {
 	if (co==0){co=1;
-	ide="a3"}
-	if (inv == "n"){
-		document.getElementById(ide).style.backgroundColor = "";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "";
-		document.getElementById("a3").style.backgroundColor = "#333";
-		document.getElementById("a3").style.color = "#cca01d";
-		ide = "a3";}
-	else {
+	revo();
+	ide="a3";}
+	if (inv == "y") {
 		document.getElementById(ide2).style.backgroundColor = "#333";
 		document.getElementById(ide2).style.color = "#ffa3d1";
-		const myTimeout = setTimeout(ret, btim);
-		document.getElementById(ide).style.backgroundColor = "purple";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "white";
-		document.getElementById("a3").style.backgroundColor = "#333";
-		document.getElementById("a3").style.color = "#ffa3d1";
-		ide = "a3";
-	}}
+		const myTimeout = setTimeout(ret, btim);}
+	revo();
+	ide="a3"
+	hig();}
 	
 	function ret() {
 		document.getElementById(ide2).style.backgroundColor = "#555555";
@@ -443,50 +440,29 @@
 	
 	function c2() {
 	if (co==0){co=1;
-	ide="a2"}
-	if (inv == "n"){
-		document.getElementById(ide).style.backgroundColor = "";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "";
-		document.getElementById("a2").style.backgroundColor = "#333";
-		document.getElementById("a2").style.color = "#cca01d";
-		ide = "a2";}
-	else {
+	revo();
+	ide="a2";}
+	if (inv == "y") {
 		document.getElementById(ide2).style.backgroundColor = "#333";
 		document.getElementById(ide2).style.color = "#ffa3d1";
 		const myTimeout = setTimeout(ret, btim);
-		document.getElementById(ide).style.backgroundColor = "purple";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "white";
-		document.getElementById("a2").style.backgroundColor = "#333";
-		document.getElementById("a2").style.color = "#ffa3d1";
-		ide = "a2";
 		if (document.getElementById("wo").style.display == "none") {
 		 document.getElementById("dc3a").href = "#wo2";}
-		else {document.getElementById("dc3a").href = "#wo";}
-	}}
+		else {document.getElementById("dc3a").href = "#wo";}}
+	revo();
+	ide="a2";
+	hig();}
 	
 	function c1() {
 	if (co==0){co=1;
-	ide="a1"}
-	if (inv == "n"){
-		document.getElementById(ide).style.backgroundColor = "";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "";
-		document.getElementById("a1").style.backgroundColor = "#333";
-		document.getElementById("a1").style.color = "#cca01d";
-		ide = "a1";}
-	else {
-		document.getElementById(ide).style.backgroundColor = "purple";
-		document.getElementById(ide).style.padding = "13.5px 18px";
-		document.getElementById(ide).style.color = "white";
-		document.getElementById("a1").style.backgroundColor = "#333";
-		document.getElementById("a1").style.color = "#ffa3d1";
-		ide = "a1";
-	}}
+	revo();
+	ide="a1";}
+	revo();
+	ide = "a1";
+	hig();}
 	
-	function cide() {
-		if (inv == "n"){
+	function revo() {
+	if (inv == "n"){
 		document.getElementById(ide).style.backgroundColor = "";
 		document.getElementById(ide).style.padding = "13.5px 18px";
 		document.getElementById(ide).style.color = "";}
@@ -494,10 +470,9 @@
 		document.getElementById(ide).style.backgroundColor = "purple";
 		document.getElementById(ide).style.padding = "13.5px 18px";
 		document.getElementById(ide).style.color = "white";}
-	ide = "a2";
-	scr();}
+	}
 	
-	function scr() {
+	function hig() {
 	if (inv == "n"){
 		document.getElementById(ide).style.backgroundColor = "#333";
 		document.getElementById(ide).style.color = "#cca01d";}
@@ -506,9 +481,23 @@
 		document.getElementById(ide).style.color = "#ffa3d1";
 	}}
 	
+	function cid1() {
+	revo();
+	ide = "a1";
+	hig();}
+	
+	function cid2() {
+	revo();
+	ide = "a2";
+	hig();}
+	
+	function cid3() {
+	revo();
+	ide = "a3";
+	hig();}
+	
 	document.getElementById("dc1a").addEventListener("click", invert());
 	document.getElementById("dc1b").addEventListener("click", lgtext());
-	document.getElementById("wo").addEventListener("scroll", cide());
 	</script>
 
 	<div class="banner"><img src="Knight.jpg" alt="Knights on horseback" width="100%" height="300"></div>
@@ -520,7 +509,7 @@
 			<a id="dc1b" onclick = "lgtext()" onmouseover="dcn1b()" onmouseout="hoff()" style="border-right: initial; cursor: pointer">Large Text</a>
 		  </div>
 	  </li>
-	  <li id="l2" class="nondrop" onmouseover="hn4()" onmouseout="hoff()"><a id="a4" onclick="c4()" href="#home" style="border-right: initial">CV</a></li>
+	  <li id="l2" class="nondrop" onmouseover="hn4()" onmouseout="hoff()"><a id="a4" onclick="c4()" href="KushCV.pdf" target="_blank" style="border-right: initial">CV</a></li>
 	  <li id="l3" class="dropdown">
 		<a id="a3" onmouseover="hn3()" onmouseout="hoff()" class="dropbtn">Projects</a>
 		<div class="dropdown-content">
@@ -533,24 +522,29 @@
 		<a id="a2" class="dropbtn" onmouseover="hn2()" onmouseout="hoff()">Work</a>
 		<div class="dropdown-content">
 		  <a id="dc3a" href="#wo" onclick = "c2()" onmouseover="dcn3a()" onmouseout="hoff()" style="border-right: initial">Dissertation</a>
-		  <a id="dc3b" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial">Miscellaneous I.</a>
+		  <a id="dc3b" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial">Energy Systems</a>
 		</div>
 		</li>
 	  <li id="l5" class="nondrop" onmouseover="hn1()" onmouseout="hoff()" ><a id="a1" onclick="c1()" href="#about" style="border-left: 1px solid #bbb">About</a></li>
 	</div>
 
+	<div onmouseover="cid1()" onscroll="cid1()">
 	<center><div id="cla1" class="bl"><div class="b2">
 	<br><br><br id="about"><br>
 	<h1>About</h1>
 	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng). This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
-	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities. For serious enquiries, please contact me on <a id="em" href="mailto:kush.kotecha38@gmail.com">kush.kotecha38@gmail.com</a></p><br id="wo2"><br><br id="wo1">
+	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
+	 You can see my CV by clicking the tab on the left-hand side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
+	 Contact: <a id="em" href="mailto:kush.kotecha38@gmail.com">kush.kotecha38@gmail.com</a><br id="wo2"><br><br id="wo1">
 	</div></div></center>
 	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the right-hand side of the navigation bar</h2>
+	</div>
 	<center><div class="blt"><div id="cla2" class="b2t">
+	<div onmouseover="cid2()" onscroll="cid2()">
     <br id="wo">
-	<h1 onscroll="cide()" style="padding-top: 30px">Work</h1>
+	<h1 style="padding-top: 30px">Work</h1>
 	<h3>Dissertation</h3>
-	<p>My dissertation topic was <i> Wetting of a Droplet of Aqueous LiTFSI on Graphite Using Molecular Dynamics </i> in relation to energy storage systems.
+	<p>My dissertation topic was <a id="li0" href="Wettability.pdf" target="_blank">Wettability of aqueous LiTFSI on graphite using Molecular Dynamics</a> in relation to energy storage systems.
 	<br><br>The initial report contains a discussion of different energy storage technologies that use aqueous electrolytes along with information on the different components within a supercapacitor.
 	Then there is a comparison of salts used in aqueous electrolytes and a brief look inside the operation of a supercapacitor containing LiTFSI (aq). 
 	<br><br>
@@ -560,23 +554,27 @@
 	<span class="disstt">This dissertation aims to understand the wetting properties of aqueous LiTFSI on an uncharged graphite electrode with respect to concentration, temperature, and surface type. Wetting is quantified by the contact angle between the droplet and electrode which is measured graphically using Python and qualitatively evaluated using Young’s Equation.
 	<br><br>A basic introduction to Molecular Dynamics is provided and the theory behind key components of the simulation have been discussed in detail. The procedure for input preparation is given along with all supplementary files required to completely reproduce simulation of a 6 molal droplet at 298K on a flat surface (appendix B).
 	<br><br>The results show that the contact angle of water droplets decreases significantly with the introduction of LiTFSI and then continues to decrease at a more subdued rate as further ions are added. Increasing temperature also causes the contact angle to decrease and evaporation of water further decreases the contact angle. At 75° and 100°C, and an initial concentration of 6.00 molal, perfect wetting is achieved. Contact angle results could not be drawn from the changes in surface however the simulations serve as a preliminary insight into intercalation of LiTFSI between graphite layers.
-	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (no potential difference or reactions modelled). Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
+	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (no potential difference or reactions modelled). Relevant market analysis is conducted and ideas for the future of LiTFSI are explored. Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
 	</span>
 	</div></p>
 	<br><br id="wo3"><br><br>
-	<h3>Miscellaneous I.</h3>
-	<p>In my final year, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
-	Here is the coursework for USD and SES <a id="li3" href="Utility-System-Design-Coursework.pdf">Files here</a> (USD model and optimise an existing system) ... performed in groups and kept teamwork stuff - parts in GREEN are my individual work.</p>
-	<br><br><br id="pr"><br>
+	<h3>Energy Systems</h3>
+	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
+	<br><br>I have attached some of my current energy system work: <br><a id="li3" href="USD-CW.pdf" target="_blank">Analysis of utility system model and optimisation (USD)</a> and <a id="li4" href="SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study (SES)</a>. 
+	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
+	<br><br>
+	</div><div id="proj" onmouseover="cid3()" onscroll="cid3()">
+	<br id="pr"><br>
 	<h1>Projects</h1>
 	<h3>MineSS in C#</h3>
-	<p>One great thing about programming is that most personal projects do not have huge financial impacts so you can explore your creativity.
-	This is my rendition of MineSweeper written in C# which contains the normal game along with 6 other game modes. Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
+	<p>One great thing about programming is that you can be as creative as you want.
+	This is my adaptation of MineSweeper called <a id="li5" href="MineS.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes. <br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
-	<a href="#about">C#</a></p>
+	<br><br>Version 1.2 (unreleased): I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper).</p>
 	<br><br><br id="ma"><br>
 	<h3>Matlab</h3>
-	<p>As part of 3rd yr project, modelled PBR with SA options</p>
+	<p>For my 3rd year design project, I modelled a <a id="li6" href="https://uk.mathworks.com/matlabcentral/fileexchange/132078-packed-bed-reactor-toluene-methylation-to-produce-p-xylene?s_tid=prof_contriblnk" target="_blank">packed bed reactor in MATLAB</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
+	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
 	<br><br><br id="mi"><br>
 	<h3>Miscellaneous II.</h3>
 	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
@@ -586,7 +584,9 @@
 	<br><br><br><br>
 	<h3 id="home">Dropdown Menu inside a Navigation Bar</h3>
 	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-	<br><br><br><br>
+	<br><br>
+	</div>
+	<br><br>
 	</div></div></center>
 </body>
 
