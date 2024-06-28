@@ -202,12 +202,12 @@
 		if (inv == "n")
 			{inv = "y";
 			txChange();
-			 document.getElementById("d1").style.backgroundColor = "purple";
-			 document.getElementById("a5").style.backgroundColor = "purple";
-			 document.getElementById("a4").style.backgroundColor = "purple";
-			 document.getElementById("a3").style.backgroundColor = "purple";
-			 document.getElementById("a2").style.backgroundColor = "purple";
-			 document.getElementById("a1").style.backgroundColor = "purple";
+			 document.getElementById("d1").style.backgroundColor = "#602f6b";
+			 document.getElementById("a5").style.backgroundColor = "#602f6b";
+			 document.getElementById("a4").style.backgroundColor = "#602f6b";
+			 document.getElementById("a3").style.backgroundColor = "#602f6b";
+			 document.getElementById("a2").style.backgroundColor = "#602f6b";
+			 document.getElementById("a1").style.backgroundColor = "#602f6b";
 			 document.getElementById("a5").style.color = "#efefef";
 			 document.getElementById("a4").style.color = "#efefef";
 			 document.getElementById("a3").style.color = "#efefef";
@@ -240,10 +240,10 @@
 			 document.getElementById("li6").style.color = "yellow";
 			 if (co!=0) {
 			 document.getElementById(ide).style.backgroundColor = "#333";
-			 document.getElementById(ide).style.color = "#ffa3d1";}
+			 document.getElementById(ide).style.color = "#cca01d";}
 			 else if (co==0 && ide!="a4") {
 			 document.getElementById(ide).style.backgroundColor = "#333";
-			 document.getElementById(ide).style.color = "#ffa3d1";}
+			 document.getElementById(ide).style.color = "#cca01d";}
 			 }
 		else
 			{inv = "n";
@@ -285,7 +285,7 @@
 			 document.getElementById("li5").style.color = "";
 			 document.getElementById("li6").style.color = "";
 			 document.getElementById(ide2).style.backgroundColor = "#333";
-			 document.getElementById(ide2).style.color = "#ffa3d1";
+			 document.getElementById(ide2).style.color = "#cca01d";
 			 const myTimeout = setTimeout(ret2, btim);
 			 
 			 if (co!=0) {
@@ -328,7 +328,7 @@
 	
 	function hon() {
 	   if (inv == "y") {
-	       document.getElementById(ide2).style.backgroundColor = "#9f9f9f";}}
+	       document.getElementById(ide2).style.backgroundColor = "#d6cadd";}}
 		   
 	function hoff() {
 		if (inv == "y") {
@@ -337,7 +337,7 @@
 		else if (dro=="y")
 		{document.getElementById(ide2).style.backgroundColor = "#555555";
 		 document.getElementById(ide2).style.color = "white"}
-		else {document.getElementById(ide2).style.backgroundColor = "purple";}
+		else {document.getElementById(ide2).style.backgroundColor = "#602f6b";}
 		}}
 	
 	function hn4() {
@@ -398,7 +398,7 @@
 	function lgtext() {
 	if (inv == "y"){
 		document.getElementById(ide2).style.backgroundColor = "#333";
-		document.getElementById(ide2).style.color = "#ffa3d1";
+		document.getElementById(ide2).style.color = "#cca01d";
 		const myTimeout = setTimeout(ret, btim);}
 	if (lg == "n")
 		{lg = "y";
@@ -424,7 +424,7 @@
 	ide="a3";}
 	if (inv == "y") {
 		document.getElementById(ide2).style.backgroundColor = "#333";
-		document.getElementById(ide2).style.color = "#ffa3d1";
+		document.getElementById(ide2).style.color = "#cca01d";
 		const myTimeout = setTimeout(ret, btim);}
 	revo();
 	ide="a3"
@@ -444,7 +444,7 @@
 	ide="a2";}
 	if (inv == "y") {
 		document.getElementById(ide2).style.backgroundColor = "#333";
-		document.getElementById(ide2).style.color = "#ffa3d1";
+		document.getElementById(ide2).style.color = "#cca01d";
 		const myTimeout = setTimeout(ret, btim);
 		if (document.getElementById("wo").style.display == "none") {
 		 document.getElementById("dc3a").href = "#wo2";}
@@ -467,7 +467,7 @@
 		document.getElementById(ide).style.padding = "13.5px 18px";
 		document.getElementById(ide).style.color = "";}
 		else {
-		document.getElementById(ide).style.backgroundColor = "purple";
+		document.getElementById(ide).style.backgroundColor = "#602f6b";
 		document.getElementById(ide).style.padding = "13.5px 18px";
 		document.getElementById(ide).style.color = "white";}
 	}
@@ -478,7 +478,7 @@
 		document.getElementById(ide).style.color = "#cca01d";}
 	else {
 		document.getElementById(ide).style.backgroundColor = "#333";
-		document.getElementById(ide).style.color = "#ffa3d1";
+		document.getElementById(ide).style.color = "#cca01d";
 	}}
 	
 	function cid1() {
@@ -515,7 +515,7 @@
 		<div class="dropdown-content">
 		  <a id="dc2a" href="#pr" onclick="c3()" onmouseover="dcn2a()" onmouseout="hoff()" style="border-right: initial">C#</a>
 		  <a id="dc2b" href="#ma" onclick = "c3()" onmouseover="dcn2b()" onmouseout="hoff()" style="border-right: initial">Matlab</a>
-		  <a id="dc2c" href="#mi" onclick = "c3()" onmouseover="dcn2c()" onmouseout="hoff()" style="border-right: initial">Miscellaneous II.</a>
+		  <a id="dc2c" href="#mi" onclick = "c3()" onmouseover="dcn2c()" onmouseout="hoff()" style="border-right: initial">Miscellaneous I.</a>
 		</div>
 	  </li>
 	  <li id="l4" class="dropdown">
@@ -532,7 +532,7 @@
 	<center><div id="cla1" class="bl"><div class="b2">
 	<br><br><br id="about"><br>
 	<h1>About</h1>
-	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng). This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
+	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester. This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
 	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
 	 You can see my CV by clicking the tab on the left-hand side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
 	 Contact: <a id="em" href="mailto:kush.kotecha38@gmail.com">kush.kotecha38@gmail.com</a><br id="wo2"><br><br id="wo1">
@@ -570,21 +570,14 @@
 	<p>One great thing about programming is that you can be as creative as you want.
 	This is my adaptation of MineSweeper called <a id="li5" href="MineS.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes. <br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
-	<br><br>Version 1.2 (unreleased): I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper).</p>
+	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper) along with a scoreboard system.</p>
 	<br><br><br id="ma"><br>
 	<h3>Matlab</h3>
 	<p>For my 3rd year design project, I modelled a <a id="li6" href="https://uk.mathworks.com/matlabcentral/fileexchange/132078-packed-bed-reactor-toluene-methylation-to-produce-p-xylene?s_tid=prof_contriblnk" target="_blank">packed bed reactor in MATLAB</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
 	<br><br><br id="mi"><br>
-	<h3>Miscellaneous II.</h3>
-	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-	<br><br><br><br>
-	<h3>Dropdown Menu inside a Navigation Bar</h3>
-	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-	<br><br><br><br>
-	<h3 id="home">Dropdown Menu inside a Navigation Bar</h3>
-	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-	<br><br>
+	<h3>Miscellaneous I.</h3>
+	
 	</div>
 	<br><br>
 	</div></div></center>
