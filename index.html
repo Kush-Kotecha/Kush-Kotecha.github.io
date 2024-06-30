@@ -299,15 +299,15 @@
 	
 	function txChange() {
 			if (lg=="n" && inv == "y") {
-			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can increase the text size on the right side of the navigation bar";
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can increase the text size on the left side of the navigation bar";
 				document.getElementById("a4").href = "KushCVA.pdf";	
 			 }
 			 if (lg=="n" && inv == "n") {
-			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page and increase the text size on the right side of the navigation bar";
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page and increase the text size on the left side of the navigation bar";
 			 	document.getElementById("a4").href = "KushCV.pdf";	
 			 }
 			 if (lg=="y" && inv == "n") {
-			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page on the right side of the navigation bar";
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page on the left side of the navigation bar";
 			    document.getElementById("a4").href = "KushCVL.pdf";
 			 }
 			 if (lg=="y" && inv == "y") {
@@ -522,7 +522,7 @@
 		<a id="a2" class="dropbtn" onmouseover="hn2()" onmouseout="hoff()">Work</a>
 		<div class="dropdown-content">
 		  <a id="dc3a" href="#wo" onclick = "c2()" onmouseover="dcn3a()" onmouseout="hoff()" style="border-right: initial">Dissertation</a>
-		  <a id="dc3b" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial">Energy Systems</a>
+		  <a id="dc3b" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial">Utility Systems</a>
 		</div>
 		</li>
 	  <li id="l5" class="nondrop" onmouseover="hn1()" onmouseout="hoff()" ><a id="a1" onclick="c1()" href="#about" style="border-left: 1px solid #bbb">About</a></li>
@@ -534,10 +534,10 @@
 	<h1>About</h1>
 	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester. This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
 	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
-	 You can see my CV by clicking the tab on the left-hand side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
+	 You can see my CV by clicking the tab on the right-hand side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
 	 Contact: <a id="em" href="mailto:kush.kotecha38@gmail.com">kush.kotecha38@gmail.com</a><br id="wo2"><br><br id="wo1">
 	</div></div></center>
-	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the right-hand side of the navigation bar</h2>
+	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the left-hand side of the navigation bar</h2>
 	</div>
 	<center><div class="blt"><div id="cla2" class="b2t">
 	<div onmouseover="cid2()" onscroll="cid2()">
@@ -552,13 +552,13 @@
 	There are 3 investigations which look at slightly different aspects of the system but all share the same goal of improving electrolyte performance.
 	<div id="li1" class="tt">Hover over this to read the dissertation abstract
 	<span class="disstt">This dissertation aims to understand the wetting properties of aqueous LiTFSI on an uncharged graphite electrode with respect to concentration, temperature, and surface type. Wetting is quantified by the contact angle between the droplet and electrode which is measured graphically using Python and qualitatively evaluated using Young’s Equation.
-	<br><br>A basic introduction to Molecular Dynamics is provided and the theory behind key components of the simulation have been discussed in detail. The procedure for input preparation is given along with all supplementary files required to completely reproduce simulation of a 6 molal droplet at 298K on a flat surface (appendix B).
+	<br><br>A basic introduction to Molecular Dynamics is provided and the theory behind key components of the simulation have been discussed in detail. The procedure for input preparation is given along with all supplementary files required to completely reproduce simulation of a 6.00 molal droplet at 298K on a flat surface (appendix B).
 	<br><br>The results show that the contact angle of water droplets decreases significantly with the introduction of LiTFSI and then continues to decrease at a more subdued rate as further ions are added. Increasing temperature also causes the contact angle to decrease and evaporation of water further decreases the contact angle. At 75° and 100°C, and an initial concentration of 6.00 molal, perfect wetting is achieved. Contact angle results could not be drawn from the changes in surface however the simulations serve as a preliminary insight into intercalation of LiTFSI between graphite layers.
 	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (no potential difference or reactions modelled). Relevant market analysis is conducted and ideas for the future of LiTFSI are explored. Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
 	</span>
 	</div></p>
 	<br><br id="wo3"><br><br>
-	<h3>Energy Systems</h3>
+	<h3>Utility Systems</h3>
 	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
 	<br><br>I have attached some of my current energy system work: <br><a id="li3" href="USD-CW.pdf" target="_blank">Analysis of utility system model and optimisation (USD)</a> and <a id="li4" href="SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study (SES)</a>. 
 	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
@@ -566,13 +566,13 @@
 	</div><div id="proj" onmouseover="cid3()" onscroll="cid3()">
 	<br id="pr"><br>
 	<h1>Projects</h1>
-	<h3>MineSS in C#</h3>
+	<h3>MineS in C#</h3>
 	<p>One great thing about programming is that you can be as creative as you want.
 	This is my adaptation of MineSweeper called <a id="li5" href="MineS.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes. <br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
 	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper) along with a scoreboard system.</p>
 	<br><br><br id="ma"><br>
-	<h3>Matlab</h3>
+	<h3>PBR in Matlab</h3>
 	<p>For my 3rd year design project, I modelled a <a id="li6" href="https://uk.mathworks.com/matlabcentral/fileexchange/132078-packed-bed-reactor-toluene-methylation-to-produce-p-xylene?s_tid=prof_contriblnk" target="_blank">packed bed reactor in MATLAB</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
 	<br><br><br id="mi"><br>
