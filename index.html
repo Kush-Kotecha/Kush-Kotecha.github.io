@@ -97,7 +97,6 @@
 	 width: 950px;
 	 rotate: 180deg;
 	 position: relative;
-
 	}
 	
 	.blt {
@@ -105,7 +104,6 @@
 	 width: 950px;
 	 rotate: 180deg;
 	 position: relative;
-
 	}
 	
 	.bl p, .blt p {
@@ -114,7 +112,7 @@
 	}
 	
 	.bl a, .blt a {
-	 color: blue;
+	 color: #af002a;
 	 font-style: oblique;
 	}
 	
@@ -137,8 +135,8 @@
 	.tt {
 	  position: relative;
 	  display: inline-block;
-	  color: blue;
-	  border-bottom: 1px dotted blue; /* If you want dots under the hoverable text */
+	  color: #af002a;
+	  border-bottom: 1px dotted #af002a; /* If you want dots under the hoverable text */
 	}
 
 	.tt .disstt {
@@ -184,6 +182,7 @@
 </style>
 
 <head>
+<title>Kush Profile</title>
 </head>
 
 <body>
@@ -403,11 +402,22 @@
 	if (lg == "n")
 		{lg = "y";
 		txChange();
-	    document.body.style.fontSize = "20px";}
+		document.body.style.fontSize = "24px";
+		document.getElementById("cla1").style.width = "1100px";
+		document.getElementById("cla11").style.width = "1100px";
+		document.getElementById("cla2").style.width = "1100px";
+		document.getElementById("cla22").style.width = "1100px";
+		document.getElementById("hab").style.left = "475px";
+		}
 	else
 		{lg = "n";
 		 txChange();
-		 document.body.style.fontSize = "";}
+		 document.body.style.fontSize = "";
+		 document.getElementById("cla1").style.width = "";
+		 document.getElementById("cla11").style.width = "";
+		 document.getElementById("cla2").style.width = "";
+		 document.getElementById("cla22").style.width = "";
+		 document.getElementById("hab").style.left = "425px";}
 	}
 	
 	function c4() {
@@ -529,9 +539,9 @@
 	</div>
 
 	<div onmouseover="cid1()" onscroll="cid1()">
-	<center><div id="cla1" class="bl"><div class="b2">
+	<center><div id="cla1" class="bl"><div id="cla11" class="b2">
 	<br><br><br id="about"><br>
-	<h1>About</h1>
+	<h1 id="hab" style="position: absolute; top: 20px; left: 425px;">About</h1>
 	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester. This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
 	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
 	 You can see my CV by clicking the tab on the right-hand side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
@@ -539,7 +549,7 @@
 	</div></div></center>
 	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the left-hand side of the navigation bar</h2>
 	</div>
-	<center><div class="blt"><div id="cla2" class="b2t">
+	<center><div id="cla22" class="blt"><div id="cla2" class="b2t">
 	<div onmouseover="cid2()" onscroll="cid2()">
     <br id="wo">
 	<h1 style="padding-top: 30px">Work</h1>
@@ -568,7 +578,7 @@
 	<h1>Projects</h1>
 	<h3>MineS in C#</h3>
 	<p>One great thing about programming is that you can be as creative as you want.
-	This is my adaptation of MineSweeper called <a id="li5" href="MineS.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes. <br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
+	This is my adaptation of MineSweeper called <a id="li5" href="MineS.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes.<br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
 	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper) along with a scoreboard system.</p>
 	<br><br><br id="ma"><br>
