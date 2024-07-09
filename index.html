@@ -50,6 +50,7 @@
 
 	.navi li a:hover {
 	  background-color: #555555;
+	  transition: background-color 0.2s;
 	}
 
 	.dropdown li {
@@ -150,6 +151,7 @@
 	  text-align: left;
 	  padding: 5px 5px;
 	  border-radius: 6px;
+	  resize: both;
 
 	  /* Position the tooltip text */
 	  position: absolute;
@@ -172,12 +174,40 @@
 	  border-width: 5px;
 	  border-style: solid;
 	  border-color: #555 transparent transparent transparent;
+	  resize: both;
 	}
 
 	.tt:hover .disstt {
 	  visibility: visible;
 	  opacity: 1;
 	}
+	
+	.mag {
+	opacity: 0;
+	transition: opacity 0.2s linear 0.5s;}
+	
+	.mag:hover {
+	opacity: 1;}
+	
+	.ti {
+	position: relative;
+}
+
+	.tit {
+	visibility: hidden;
+	width: 340px;
+	height: 180px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	top: 120%;
+	left: 75%;
+	border-width: 1.5px;
+	border-style: solid;
+	border-color: #555;}
+	
+	.ti:hover .tit {
+	visibility: visible;}
 	
 </style>
 
@@ -237,6 +267,7 @@
 			 document.getElementById("li4").style.color = "yellow";
 			 document.getElementById("li5").style.color = "yellow";
 			 document.getElementById("li6").style.color = "yellow";
+			 document.getElementById("tip").style.color = "#f0e6ac";
 			 if (co!=0) {
 			 document.getElementById(ide).style.backgroundColor = "#333";
 			 document.getElementById(ide).style.color = "#cca01d";}
@@ -283,6 +314,7 @@
 			 document.getElementById("li4").style.color = "";
 			 document.getElementById("li5").style.color = "";
 			 document.getElementById("li6").style.color = "";
+			 document.getElementById("tip").style.color = "#8c8c8c";
 			 document.getElementById(ide2).style.backgroundColor = "#333";
 			 document.getElementById(ide2).style.color = "#cca01d";
 			 const myTimeout = setTimeout(ret2, btim);
@@ -320,7 +352,7 @@
 			 	document.getElementById("acc").style.display = "";
 				document.getElementById("wo1").style.display = "";
 				document.getElementById("cla1").style.boxShadow = "";
-				document.getElementById("cla2").style.boxShadow = "";			
+				document.getElementById("cla2").style.boxShadow = "";				
 			 }
 
 	}
@@ -408,6 +440,9 @@
 		document.getElementById("cla2").style.width = "1100px";
 		document.getElementById("cla22").style.width = "1100px";
 		document.getElementById("hab").style.left = "475px";
+		document.getElementById("im").style.width = "510px";
+		document.getElementById("im").style.height = "260px";
+		document.getElementById("im").style.left = "50%";
 		}
 	else
 		{lg = "n";
@@ -417,7 +452,10 @@
 		 document.getElementById("cla11").style.width = "";
 		 document.getElementById("cla2").style.width = "";
 		 document.getElementById("cla22").style.width = "";
-		 document.getElementById("hab").style.left = "425px";}
+		 document.getElementById("hab").style.left = "425px";
+		 document.getElementById("im").style.width = "340px";
+		 document.getElementById("im").style.height = "180px";
+		 document.getElementById("im").style.left = "60%";}
 	}
 	
 	function c4() {
@@ -441,8 +479,9 @@
 	hig();}
 	
 	function ret() {
-		document.getElementById(ide2).style.backgroundColor = "#555555";
-		document.getElementById(ide2).style.color = "white";}
+		document.getElementById(ide2).style.backgroundColor = "#d6cadd";
+		document.getElementById(ide2).style.color = "white";
+		document.getElementById(ide2).style.transition = "background-color 0.2s, color 0.2s";}
 	
 	function ret2() {
 		document.getElementById(ide2).style.backgroundColor = "";
@@ -506,6 +545,9 @@
 	ide = "a3";
 	hig();}
 	
+	function op() {
+	document.getElementById("tip").style.opacity = "1";}
+	
 	document.getElementById("dc1a").addEventListener("click", invert());
 	document.getElementById("dc1b").addEventListener("click", lgtext());
 	</script>
@@ -544,7 +586,7 @@
 	<h1 id="hab" style="position: absolute; top: 20px; left: 425px;">About</h1>
 	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester. This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
 	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
-	 You can see my CV by clicking the tab on the right-hand side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
+	 You can see my CV by clicking the tab on the right side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
 	 Contact: <a id="em" href="mailto:kush.kotecha38@gmail.com">kush.kotecha38@gmail.com</a><br id="wo2"><br><br id="wo1">
 	</div></div></center>
 	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the left-hand side of the navigation bar</h2>
@@ -566,13 +608,13 @@
 	<br><br>The results show that the contact angle of water droplets decreases significantly with the introduction of LiTFSI and then continues to decrease at a more subdued rate as further ions are added. Increasing temperature also causes the contact angle to decrease and evaporation of water further decreases the contact angle. At 75° and 100°C, and an initial concentration of 6.00 molal, perfect wetting is achieved. Contact angle results could not be drawn from the changes in surface however the simulations serve as a preliminary insight into intercalation of LiTFSI between graphite layers.
 	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (no potential difference or reactions modelled). Relevant market analysis is conducted and ideas for the future of LiTFSI are explored. Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
 	</span>
-	</div></p>
+	</div><br><span id="tip" style="color: #8c8c8c;" class="mag" onmouseout="op()">Tip: Keep the mouse on the link and scroll onto the textbox<br>You can resize the textbox from the bottom right corner</span></p>
 	<br><br id="wo3"><br><br>
 	<h3>Utility Systems</h3>
 	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
-	<br><br>I have attached some of my current energy system work: <br><a id="li3" href="USD-CW.pdf" target="_blank">Analysis of utility system model and optimisation (USD)</a> and <a id="li4" href="SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study (SES)</a>. 
+	<br><br>I have attached some of my current energy system work: <br><a id="li3" href="USD-CW.pdf" target="_blank">Analysis of utility system model and optimisation (USD)</a> and <a id="li4" href="SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study (SES)</a> 
 	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
-	<br><br>
+	<br>
 	</div><div id="proj" onmouseover="cid3()" onscroll="cid3()">
 	<br id="pr"><br>
 	<h1>Projects</h1>
@@ -583,9 +625,11 @@
 	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper) along with a scoreboard system.</p>
 	<br><br><br id="ma"><br>
 	<h3>PBR in Matlab</h3>
-	<p>For my 3rd year design project, I modelled a <a id="li6" href="https://uk.mathworks.com/matlabcentral/fileexchange/132078-packed-bed-reactor-toluene-methylation-to-produce-p-xylene?s_tid=prof_contriblnk" target="_blank">packed bed reactor in MATLAB</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
+	<p>For my 3rd year design project, I modelled a <a id="li6" class="dropdown" href="https://uk.mathworks.com/matlabcentral/fileexchange/132078-packed-bed-reactor-toluene-methylation-to-produce-p-xylene?s_tid=prof_contriblnk" target="_blank">packed bed reactor in MATLAB
+	<img id="im" class="dropdown-content" style="position: absolute; width: 340px; height: 180px; left: 60%; border-radius: 6px; border-width: 1.5px; border-style: solid; border-color: #555;" src="PBR.jpg">
+	</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
-	<br><br><br id="mi"><br>
+	<br><br><br id="mi"><br><br><br><br><br><br>
 	<h3>Miscellaneous I.</h3>
 	
 	</div>
