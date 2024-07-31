@@ -228,15 +228,110 @@
 	  box-shadow: 0 6px 10px 0 gray;
 	}
 	
-	.cart {
-	  transition: 0.3s;
+	.cartbac {
+	  transition: 1.5s ease-out;
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #af002a;
-	  display: inline-block;
-	  margin: 7.5px;
-	  filter: brightness(90%);
+	  display: block;
+	  position: absolute;
+	  left: 40%;
+	  bottom: 0%;
+	  z-index: 120;
+	  filter: brightness(25%);
+	  background-color: white;
+	}
+	
+	.cartlo {
+	  transition: 1.5s ease-out;
+	  width: 20%;
+	  height: 325px;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 10px 0 #af002a;
+	  display: block;
+	  left: 27.5%;
+	  bottom: -4%;
+	  position: absolute;
+	  z-index: 160;
+	  filter: brightness(60%);
+	  background-color: white;
+	}
+	
+	.cartro {
+	  transition: 1.5s ease-out;
+	  width: 20%;
+	  height: 325px;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 10px 0 #af002a;
+	  display: block;
+	  position: absolute;
+	  left: 52.5%;
+	  bottom: -2%;
+	  z-index: 140;
+	  filter: brightness(40%);
+	  background-color: white;
+	}
+	
+	.cartlt {
+	  transition: 1.5s ease-out;
+	  width: 20%;
+	  height: 325px;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 10px 0 #af002a;
+	  display: block;
+	  left: 27.5%;
+	  bottom: -2%;
+	  position: absolute;
+	  z-index: 140;
+	  filter: brightness(40%);
+	  background-color: white;
+	}
+	
+	.cartrt {
+	  transition: 1.5s ease-out;
+	  width: 20%;
+	  height: 325px;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 10px 0 #af002a;
+	  display: block;
+	  position: absolute;
+	  left: 52.5%;
+	  bottom: -4%;
+	  z-index: 160;
+	  filter: brightness(60%);
+	  background-color: white;
+	}
+	
+	.cartinf {
+	  transition: 1.5s ease-out;
+	  width: 20%;
+	  height: 325px;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 10px 0 #af002a;
+	  display: block;
+	  position: absolute;
+	  left: 40%;
+	  bottom: -6%;
+	  z-index: 190;
+	  filter: brightness(80%);
+	  background-color: white;
+	  cursor: pointer;
+	}
+	
+	.carthido {
+	  transition: 1.5s ease-out;
+	  width: 20%;
+	  height: 325px;
+	  border-radius: 5px;
+	  box-shadow: 0px 3px 10px 0 #af002a;
+	  display: block;
+	  visibility: hidden;
+	  position: absolute;
+	  left: 27.5%;
+	  bottom: -4%;
+	  z-index: 160;
+	  filter: brightness(80%);
 	  background-color: white;
 	  cursor: pointer;
 	}
@@ -301,7 +396,10 @@
 	}
 	
 	.pagination {
-		display: inline-block;}
+		display: block;
+		position: absolute;
+		left: 31%;
+		bottom: -8.2%;}
 		
 
 	.pagination a {
@@ -346,8 +444,10 @@
 	let dro = "n";
 	let btim = 200;
 	let navc = "pc1";
-	let clist = ["ct1", "ct2", "ct3", "ct4"];
-	let plist = ["pag1", "pag2", "pag3", "pag4"];
+	let clist = ["ct1", "ct2", "ct3", "ct4", "ct5", "ct6", "ct7"];
+	let plist = ["pag1", "pag2", "pag3", "pag4", "pag5", "pag6", "pag7"];
+	let oclist = [po, pt, pth, pf, pfi, ps, pse];
+	let cnlist = ["cartinf", "cartrt", "cartro", "cartbac", "cartlt", "cartlo", "carthido"];
 	let indy = 0;
 
 	function invert() {
@@ -690,24 +790,46 @@
 	openNav();}
 	
 	function po(){
+	if (document.getElementById(clist[0]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
 	navc = "pc1";
-	openNavt();}
+	openNavt();}}
 	
 	function pt(){
+	if (document.getElementById(clist[1]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
 	navc = "pc2";
-	openNavt();}
+	openNavt();}}
 	
 	function pth(){
+	if (document.getElementById(clist[2]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
 	navc = "pc3";
-	openNavt();}
+	openNavt();}}
 	
 	function pf(){
+	if (document.getElementById(clist[3]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
 	navc = "pc4";
-	openNavt();}
+	openNavt();}}
+	
+	function pfi(){
+	if (document.getElementById(clist[4]).className == "cartinf"){
+	document.getElementById(navc).style.display = "";
+	navc = "pc5";
+	openNavt();}}
+	
+	function ps(){
+	if (document.getElementById(clist[5]).className == "cartinf"){
+	document.getElementById(navc).style.display = "";
+	navc = "pc6";
+	openNavt();}}
+	
+	function pse(){
+	if (document.getElementById(clist[6]).className == "cartinf"){
+	document.getElementById(navc).style.display = "";
+	navc = "pc7";
+	openNavt();}}
 	
 	function openNav() {
 	document.getElementById(navc).style.display = "block";
@@ -734,7 +856,7 @@
 	
 	function rig() {
 	unhigt();
-	if (indy < 3) {
+	if (indy < 6) {
 		indy++;}
 	else {indy = 0}
 	higt();
@@ -744,7 +866,7 @@
 	unhigt();
 	if (indy > 0) {
 		indy--;}
-	else {indy = 3}
+	else {indy = 6}
 	higt();
 	}
 	
@@ -772,12 +894,39 @@
 	higt();
 	}
 	
+	function pagfi() {
+	unhigt();
+	indy = 4;
+	higt();
+	}
+	
+	function pags() {
+	unhigt();
+	indy = 5;
+	higt();
+	}
+	
+	function pagse() {
+	unhigt();
+	indy = 6;
+	higt();
+	}
+	
 	function unhigt() {
 	document.getElementById(plist[indy]).style.backgroundColor = "";
 	}
 
 	function higt() {
 	document.getElementById(plist[indy]).style.backgroundColor = "#ddd";
+	document.getElementById(clist[indy]).className = "cartinf";
+	let tindy = indy;
+	for(let j = 0; j < cnlist.length; j++){
+	  document.getElementById(clist[tindy]).className = cnlist[j];
+	  tindy++;
+	  if(tindy > 6){
+	  tindy = 0;}
+	}
+	//oclist[indy]();
 	}
 	
 	document.getElementById("dc1a").addEventListener("click", invert());
@@ -830,7 +979,7 @@
     <br id="wo">
 	<h1 style="padding-top: 30px">Work</h1>
 	<h3>Dissertation</h3>
-	<p>My dissertation topic was <a id="li0" class="lin" href="Wettability.pdf" target="_blank">Wettability of aqueous LiTFSI on graphite using Molecular Dynamics</a> in relation to energy storage systems.
+	<p>My dissertation topic was <a id="li0" class="lin" href="Wettability.pdf" target="_blank">Wettability of aqueous LiTFSI on graphite using Molecular Dynamics (currently not available)</a> in relation to energy storage systems.
 	<br><br>The initial report contains a discussion of different energy storage technologies that use aqueous electrolytes along with information on the different components within a supercapacitor.
 	Then there is a comparison of salts used in aqueous electrolytes and a brief look inside the operation of a supercapacitor containing LiTFSI (aq). 
 	<br><br>
@@ -850,9 +999,9 @@
 	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
 	<br><br id="mi"><br><br>
 	<h3>Miscellaneous I.</h3>
-	<p>Currently, the cards below are empty. In the future, they will contain industry-relevant work.</p>
-
-	<br>
+	<p>Currently, the cards below are empty. In the future, they will contain industry-relevant work.<br>
+	Limited to four cards to highlight my most significant, meaningful work with special attention for the <a class="lin" href="#wo">work I am most proud of</a>.</p>
+	<br><br>
 		<div class="card" onclick="wo()">
 		  <img src="Knight.jpg" alt="Photoshop" class="CI">
 		  <div class="container">
@@ -874,7 +1023,7 @@
 			<p>A few examples of before and after</p> 
 		  </div>
 		</div>
-		<div id="US" class="card" onclick="wf()">
+		<div class="card" onclick="wf()">
 		  <img src="Knight.jpg" alt="Photoshop" class="CI">
 		  <div class="container">
 			<h4><b>Utility Systems</b></h4> 
@@ -898,52 +1047,73 @@
 	<img id="im" class="dropdown-content" style="position: absolute; width: 340px; height: 180px; left: 60%; border-radius: 6px; border-width: 1.5px; border-style: solid; border-color: #555;" src="PBR.jpg">
 	</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
-	<br><br id="mit"><br><br>
+	<br><br><br><br id="mit">
 	<h3>Miscellaneous II.</h3>
-	<p>Use pagination for misc stuff.. 1) photoshop with image comparison sliders,
-	Misc I. Have all inline and show current one highlighted and lowered
-	Misc II.. card for each misc item - then use css to rotate like on a stand showing current - 
-	all cards hidden by default, if either side of current transform into shape -> if current stay flat and visible, else flat and hide.. have them all in carousel with current one higlighted and rest dimmed in 360 with cards at back higher</p>
-	<br><br><br><br>
-	
-	<div id="ct1" class="cart" onclick="po()">
+	<p>Here are some other projects I have worked on.</p>
+	<br>
+	<div id="ct4" class="cartbac" onclick="pf()">
+		<img src="Knight.jpg" alt="Photoshop" class="CI">
+		<div class="container">
+		  <h4><b>Placeholder 4</b></h4> 
+		  <p>A few examples of before and after</p> 
+		</div>
+	</div>
+	<div id="ct5" class="cartlt" onclick="pfi()">
+		<img src="Knight.jpg" alt="Photoshop" class="CI">
+		<div class="container">
+		  <h4><b>Placeholder 5</b></h4> 
+		  <p>A few examples of before and after</p> 
+		</div>
+	</div>
+	<div id="ct6" class="cartlo" onclick="ps()">
+	   <img src="Knight.jpg" alt="Photoshop" class="CI">
+	   <div class="container">
+		  <h4><b>Placeholder 6</b></h4> 
+		  <p>A few examples of before and after</p> 
+	   </div>
+	</div>
+	<div id="ct3" class="cartro" onclick="pth()">
+	   <img src="Knight.jpg" alt="Photoshop" class="CI">
+	   <div class="container">
+		  <h4><b>Placeholder 3</b></h4> 
+		  <p>A few examples of before and after</p> 
+	   </div>
+	</div>
+	<div id="ct2" class="cartrt" onclick="pt()">
+		<img src="Knight.jpg" alt="Photoshop" class="CI">
+		<div class="container">
+		  <h4><b>Placeholder 2</b></h4> 
+		  <p>A few examples of before and after</p> 
+		</div>
+	</div>
+	<div id="ct1" class="cartinf" onclick="po()">
 	   <img src="Knight.jpg" alt="Photoshop" class="CI">
 	   <div class="container">
 		  <h4><b>Photoshop</b></h4> 
 	      <p>A few examples of before and after</p> 
 		  </div>
 	</div>
-	<div id="ct2" class="cart" onclick="pt()">
-		<img src="Knight.jpg" alt="Photoshop" class="CI">
-		<div class="container">
-		  <h4><b>Placeholder</b></h4> 
-		  <p>A few examples of before and after</p> 
-		</div>
-	</div>
-	<div id="ct3" class="cart" onclick="pth()">
+	<div id="ct7" class="carthido" onclick="pse()">
 	   <img src="Knight.jpg" alt="Photoshop" class="CI">
 	   <div class="container">
-		  <h4><b>Placeholder</b></h4> 
-		  <p>A few examples of before and after</p> 
-	   </div>
+		  <h4><b>Placeholder 7</b></h4> 
+	      <p>A few examples of before and after</p> 
+		  </div>
 	</div>
-	<div id="ct4" class="cart" onclick="pf()">
-		<img src="Knight.jpg" alt="Photoshop" class="CI">
-		<div class="container">
-		  <h4><b>Placeholder</b></h4> 
-		  <p>A few examples of before and after</p> 
-		</div>
-	</div>
-	
-	</div><br><br><div class="pagination">
-	
+	<br>
+	<div class="pagination" >
 	<a href="javascript:void(0)" onclick="lef()">&laquo;</a>
-	<a id="pag1" href="javascript:void(0)" onclick="pago()" style="background-color: #ddd;">Photoshop</a>
-	<a id="pag2" href="javascript:void(0)" onclick="pagt()">Cart 2</a>
+	<a id="pag1" href="javascript:void(0)" onclick="pago()" style="background-color: #ddd;">1</a>
+	<a id="pag2" href="javascript:void(0)" onclick="pagt()">2</a>
 	<a id="pag3" href="javascript:void(0)" onclick="pagth()">3</a>
 	<a id="pag4" href="javascript:void(0)" onclick="pagf()">4</a>
+	<a id="pag5" href="javascript:void(0)" onclick="pagfi()">5</a>
+	<a id="pag6" href="javascript:void(0)" onclick="pags()">6</a>
+	<a id="pag7" href="javascript:void(0)" onclick="pagse()">7</a>
 	<a href="javascript:void(0)" onclick="rig()">&raquo;</a>
 	</div>
+	</div>
+	
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div></div></center>
 	
@@ -981,7 +1151,7 @@
 	
 	<div id="myNav2" class="overlay">
 	  <a id="cb2" href="#mit" class="closebtn" onclick="closeNavt()">&times;</a>
-	  <div id="pc1" class="overlay-content" style="">
+	  <div id="pc1" class="overlay-content">
 		<h1>Photoshop</h1>
 	    <p id="ptemp" style="color:white">PC1<br>Writing</p>
 		<a href="#">About</a>
@@ -989,22 +1159,43 @@
 		<a href="#">Clients</a>
 		<a href="#">Contact</a>
 	  </div>
-	  <div id="pc2" class="overlay-content" style="">
+	  <div id="pc2" class="overlay-content">
 	    <p style="color:white">PC2<br>Writing</p>
 		<a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
 		<a href="#">Contact</a>
 	  </div>
-	  <div id="pc3" class="overlay-content" style="">
+	  <div id="pc3" class="overlay-content">
 	    <p style="color:white">PC3<br>Writing</p>
 		<a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
 		<a href="#">Contact</a>
 	  </div>
-	  <div id="pc4" class="overlay-content" style="">
+	  <div id="pc4" class="overlay-content">
 	    <p style="color:white">PC4<br>Writing</p>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+		<a href="#">Contact</a>
+	  </div>
+	  <div id="pc5" class="overlay-content">
+	    <p style="color:white">PC5<br>Writing</p>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+		<a href="#">Contact</a>
+	  </div>
+	  <div id="pc6" class="overlay-content">
+	    <p style="color:white">PC6<br>Writing</p>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+		<a href="#">Contact</a>
+	  </div>
+	  <div id="pc7" class="overlay-content">
+	    <p style="color:white">PC7<br>Writing</p>
 		<a href="#">About</a>
 		<a href="#">Services</a>
 		<a href="#">Clients</a>
