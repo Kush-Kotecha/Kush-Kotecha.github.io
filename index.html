@@ -24,7 +24,7 @@
 	.banner {
 	 width: 98vw;
 	 height: 300px;
-	 overflow:hidden;
+	 overflow: hidden;
 	}
 	
 	.banner img {
@@ -218,14 +218,13 @@
 	  box-shadow: 3px 3px 10px 0 #af002a;
 	  display: inline-block;
 	  margin: 7.5px;
-	  filter: brightness(90%);
-	  background-color: white;
+	  filter: brightness(80%);
+	  background-color: #d5d5d5;
 	  cursor: pointer;
 	}
 
 	.card:hover {
-	  filter: brightness(120%);
-	  box-shadow: 0 6px 10px 0 gray;
+	  filter: brightness(110%);
 	}
 	
 	.cartbac {
@@ -240,7 +239,7 @@
 	  bottom: 0%;
 	  z-index: 120;
 	  filter: brightness(25%);
-	  background-color: white;
+	  background-color: #d5d5d5;
 	}
 	
 	.cartlo {
@@ -255,7 +254,7 @@
 	  position: absolute;
 	  z-index: 160;
 	  filter: brightness(60%);
-	  background-color: white;
+	  background-color: #d5d5d5;
 	}
 	
 	.cartro {
@@ -270,7 +269,7 @@
 	  bottom: -2%;
 	  z-index: 140;
 	  filter: brightness(40%);
-	  background-color: white;
+	  background-color: #d5d5d5;
 	}
 	
 	.cartlt {
@@ -285,7 +284,7 @@
 	  position: absolute;
 	  z-index: 140;
 	  filter: brightness(40%);
-	  background-color: white;
+	  background-color: #d5d5d5;
 	}
 	
 	.cartrt {
@@ -300,7 +299,7 @@
 	  bottom: -4%;
 	  z-index: 160;
 	  filter: brightness(60%);
-	  background-color: white;
+	  background-color: #d5d5d5;
 	}
 	
 	.cartinf {
@@ -314,9 +313,14 @@
 	  left: 40%;
 	  bottom: -6%;
 	  z-index: 190;
-	  filter: brightness(80%);
-	  background-color: white;
+	  filter: brightness(110%);
+	  background-color: #d5d5d5;
 	  cursor: pointer;
+	}
+	
+	.cartinf:hover {
+	  transition: 0.3s;
+	  box-shadow: 0 6px 10px 0 gray;
 	}
 	
 	.carthido {
@@ -332,8 +336,7 @@
 	  bottom: -4%;
 	  z-index: 160;
 	  filter: brightness(80%);
-	  background-color: white;
-	  cursor: pointer;
+	  background-color: #d5d5d5;
 	}
 	
 	.CI {
@@ -350,6 +353,7 @@
 	.container p {
 	text-align: left;
 	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
 	}
 	
 	.overlay {
@@ -361,7 +365,7 @@
 	  background-color: rgb(0,0,0);
 	  background-color: rgba(0,0,0, 0.9);
 	  overflow-y: auto;
-	  transition: 0.7s;
+	  transition: 1s;
 	}
 
 	.overlay-content {
@@ -373,6 +377,10 @@
 	  color: white;
 	  display: none;
 	}
+	
+	.overlay p {
+	  margin-left: 15px;
+	  margin-right: 35px;}
 
 	.overlay a {
 	  padding: 8px;
@@ -399,7 +407,8 @@
 		display: block;
 		position: absolute;
 		left: 31%;
-		bottom: -8.2%;}
+		bottom: -8.2%;
+		z-index: 2;}
 		
 
 	.pagination a {
@@ -421,8 +430,56 @@
 	.pagination a:last-child {
 	  border-radius: 0 5px 5px 0;
 	}
-
 	
+	#hab {
+	left: 46%;
+	}
+	
+	@media only screen and (min-width: 2000px) {
+		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
+			width: 15%;}
+		
+		#hab {
+		left: 48%;}
+		
+		.pagination {
+		left: 38%;}
+		
+		.overlay-content {
+		top: 20%;}
+	}
+
+	.img-comp-container {
+	  box-sizing: border-box;
+	  position: relative;
+	  height: 400px; /*should be the same height as the images*/
+	  display: inline-block;
+	  margin-left: 30%;
+	}
+
+	.img-comp-img {
+	  position: absolute;
+	  width: auto;
+	  height: auto;
+	  overflow: hidden;
+	}
+
+	.img-comp-img img {
+	  display: block;
+	  vertical-align: middle;
+	}
+
+	.img-comp-slider {
+	  position: absolute;
+	  z-index: 9;
+	  cursor: ew-resize;
+	  /*set the appearance of the slider:*/
+	  width: 40px;
+	  height: 40px;
+	  background-color: #2196F3;
+	  opacity: 0.7;
+	  border-radius: 50%;
+	}
 </style>
 
 <head>
@@ -472,8 +529,20 @@
 			 document.getElementById(ide2).style.color = "#cca01d";
 			 cChang("card", "background-Color", "#353839");
 			 cChang("card", "box-Shadow", "3px 3px 10px 0 #0dd");
-			 cChang("cart", "background-Color", "#353839");
-			 cChang("cart", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("cartinf", "background-Color", "#353839");
+			 cChang("cartinf", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("cartlo", "background-Color", "#353839");
+			 cChang("cartlo", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("cartro", "background-Color", "#353839");
+			 cChang("cartro", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("cartlt", "background-Color", "#353839");
+			 cChang("cartlt", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("cartrt", "background-Color", "#353839");
+			 cChang("cartrt", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("cartbac", "background-Color", "#353839");
+			 cChang("cartbac", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 cChang("carthido", "background-Color", "#353839");
+			 cChang("carthido", "box-Shadow", "0px 3px 10px 0 #0dd");
 			 const myTimeout = setTimeout(ret, btim);
 			 if (co!=0) {
 			 document.getElementById(ide).style.backgroundColor = "#333";
@@ -503,8 +572,22 @@
 			 document.getElementById(ide2).style.color = "#cca01d";
 			 cChang("card", "background-Color", "");
 			 cChang("card", "box-Shadow", "");
-			 cChang("cart", "background-Color", "");
-			 cChang("cart", "box-Shadow", "");
+			 cChang("card", "background-Color", "");
+			 cChang("card", "box-Shadow", "");
+			 cChang("cartinf", "background-Color", "");
+			 cChang("cartinf", "box-Shadow", "");
+			 cChang("cartlo", "background-Color", "");
+			 cChang("cartlo", "box-Shadow", "");
+			 cChang("cartro", "background-Color", "");
+			 cChang("cartro", "box-Shadow", "");
+			 cChang("cartlt", "background-Color", "");
+			 cChang("cartlt", "box-Shadow", "");
+			 cChang("cartrt", "background-Color", "");
+			 cChang("cartrt", "box-Shadow", "");
+			 cChang("cartbac", "background-Color", "");
+			 cChang("cartbac", "box-Shadow", "");
+			 cChang("carthido", "background-Color", "");
+			 cChang("carthido", "box-Shadow", "");
 			 const myTimeout = setTimeout(ret2, btim);
 			 
 			 if (co!=0) {
@@ -541,9 +624,22 @@
 		document.getElementById("im").style.left = "50%";
 		cChang("card", "height", "425px");
 		cChang("card", "width", "22.5%");
-		cChang("cart", "height", "425px");
-		cChang("cart", "width", "22.5%");
+		cChang("cartinf", "height", "425px");
+		cChang("cartinf", "width", "22.5%");
+		cChang("cartlo", "height", "425px");
+		cChang("cartlo", "width", "22.5%");
+		cChang("cartro", "height", "425px");
+		cChang("cartro", "width", "22.5%");
+		cChang("cartlt", "height", "425px");
+		cChang("cartlt", "width", "22.5%");
+		cChang("cartrt", "height", "425px");
+		cChang("cartrt", "width", "22.5%");
+		cChang("cartbac", "height", "425px");
+		cChang("cartbac", "width", "22.5%");
+		cChang("carthido", "height", "425px");
+		cChang("carthido", "width", "22.5%");
 		cChang("CI", "height", "250px");
+		cChang(".container p", "color", "red");
 		cChang("overlay", "left", "-50px");
 		cChang("overlay-content", "top", "9%");
 		cChang("exc", "display", "none");
@@ -564,6 +660,20 @@
 		 cChang("card", "width", "");
 		 cChang("cart", "height", "");
 		 cChang("cart", "width", "");
+		 cChang("cartinf", "height", "");
+		 cChang("cartinf", "width", "");
+		 cChang("cartlo", "height", "");
+		 cChang("cartlo", "width", "");
+		 cChang("cartro", "height", "");
+		 cChang("cartro", "width", "");
+		 cChang("cartlt", "height", "");
+		 cChang("cartlt", "width", "");
+		 cChang("cartrt", "height", "");
+		 cChang("cartrt", "width", "");
+		 cChang("cartbac", "height", "");
+	  	 cChang("cartbac", "width", "");
+		 cChang("carthido", "height", "");
+		 cChang("carthido", "width", "");
 		 cChang("CI", "height", "");
 		 cChang("overlay", "left", "");
 		 cChang("overlay-content", "top", "");
@@ -574,22 +684,22 @@
 	function txChange() {
 			if (lg=="n" && inv == "y") {
 			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can increase the text size on the left side of the navigation bar";
-				document.getElementById("a4").href = "KushCVA.pdf";	
+				document.getElementById("a4").href = "CVs/KushCVA.pdf";	
 			 }
 			 if (lg=="n" && inv == "n") {
 			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page and increase the text size on the left side of the navigation bar";
-			 	document.getElementById("a4").href = "KushCV.pdf";	
+			 	document.getElementById("a4").href = "CVs/KushCV.pdf";	
 			 }
 			 if (lg=="y" && inv == "n") {
 			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page on the left side of the navigation bar";
-			    document.getElementById("a4").href = "KushCVL.pdf";
+			    document.getElementById("a4").href = "CVs/KushCVL.pdf";
 			 }
 			 if (lg=="y" && inv == "y") {
 			    document.getElementById("acc").style.display = "none";
 				document.getElementById("wo1").style.display = "none";
 				document.getElementById("cla1").style.boxShadow = "8px 0px 4px -4px rgba(0,0,0,0.3) inset";
 				document.getElementById("cla2").style.boxShadow = "8px 0px 4px -4px rgba(0,0,0,0.3) inset";
-				document.getElementById("a4").href = "KushCVAL.pdf";
+				document.getElementById("a4").href = "CVs/KushCVAL.pdf";
 			 }
 			 else {
 			 	document.getElementById("acc").style.display = "";
@@ -602,7 +712,8 @@
 	
 	function hon() {
 	   if (inv == "y") {
-	       document.getElementById(ide2).style.backgroundColor = "#d6cadd";}}
+	    if (ide2 != ide) {
+	       document.getElementById(ide2).style.backgroundColor = "#d6cadd";}}}
 		   
 	function hoff() {
 		if (inv == "y") {
@@ -793,7 +904,9 @@
 	if (document.getElementById(clist[0]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
 	navc = "pc1";
-	openNavt();}}
+	openNavt();
+	document.getElementById("pc1i").style.display = "";
+	document.getElementById("pc1b").style.display = "block";}}
 	
 	function pt(){
 	if (document.getElementById(clist[1]).className == "cartinf"){
@@ -836,7 +949,7 @@
 	let elem = document.getElementById("d1");
 	let coords = elem.getBoundingClientRect();
 	document.getElementById("myNav").style.top = coords.top + "px";
-	document.getElementById("myNav").style.height = "100vh"; //'false' parameter uses bottom of viewport for anchor(accounts for navbar at top)
+	document.getElementById("myNav").style.height = "100vh";
 	}
   
     function closeNav() {
@@ -852,7 +965,11 @@
   
     function closeNavt() {
     document.getElementById("myNav2").style.height = "0vh";
-	document.getElementById(navc).style.display = "";}
+	document.getElementById(navc).style.display = "";
+	if(indy==0){
+	document.getElementById("pc1i").style.display = "none";
+	document.getElementById("pc1b").style.display = "";
+	}}
 	
 	function rig() {
 	unhigt();
@@ -931,6 +1048,83 @@
 	
 	document.getElementById("dc1a").addEventListener("click", invert());
 	document.getElementById("dc1b").addEventListener("click", lgtext());
+	
+	function initComparisons() {
+	  var x, n;
+	  /* Find all elements with an "overlay" class: */
+	  x = document.getElementsByClassName("img-comp-overlay");
+	  for (n = 0; n < x.length; n++) {
+		/* Once for each "overlay" element:
+		pass the "overlay" element as a parameter when executing the compareImages function: */
+		compareImages(x[n]);
+	  }
+	  function compareImages(img) {
+		var slider, img, clicked = 0, w, h;
+		/* Get the width and height of the img element */
+		w = img.offsetWidth;
+		h = img.offsetHeight;
+		/* Set the width of the img element to 50%: */
+		img.style.width = (w / 2) + "px";
+		/* Create slider: */
+		slider = document.createElement("DIV");
+		slider.setAttribute("class", "img-comp-slider");
+		/* Insert slider */
+		img.parentElement.insertBefore(slider, img);
+		/* Position the slider in the middle: */
+		slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+		slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+		/* Execute a function when the mouse button is pressed: */
+		slider.addEventListener("mousedown", slideReady);
+		/* And another function when the mouse button is released: */
+		window.addEventListener("mouseup", slideFinish);
+		/* Or touched (for touch screens: */
+		slider.addEventListener("touchstart", slideReady);
+		 /* And released (for touch screens: */
+		window.addEventListener("touchend", slideFinish);
+		function slideReady(e) {
+		  /* Prevent any other actions that may occur when moving over the image: */
+		  e.preventDefault();
+		  /* The slider is now clicked and ready to move: */
+		  clicked = 1;
+		  /* Execute a function when the slider is moved: */
+		  window.addEventListener("mousemove", slideMove);
+		  window.addEventListener("touchmove", slideMove);
+		}
+		function slideFinish() {
+		  /* The slider is no longer clicked: */
+		  clicked = 0;
+		}
+		function slideMove(e) {
+		  var pos;
+		  /* If the slider is no longer clicked, exit this function: */
+		  if (clicked == 0) return false;
+		  /* Get the cursor's x position: */
+		  pos = getCursorPos(e)
+		  /* Prevent the slider from being positioned outside the image: */
+		  if (pos < 0) pos = 0;
+		  if (pos > w) pos = w;
+		  /* Execute a function that will resize the overlay image according to the cursor: */
+		  slide(pos);
+		}
+		function getCursorPos(e) {
+		  var a, x = 0;
+		  e = (e.changedTouches) ? e.changedTouches[0] : e;
+		  /* Get the x positions of the image: */
+		  a = img.getBoundingClientRect();
+		  /* Calculate the cursor's x coordinate, relative to the image: */
+		  x = e.pageX - a.left;
+		  /* Consider any page scrolling: */
+		  x = x - window.pageXOffset;
+		  return x;
+		}
+		function slide(x) {
+		  /* Resize the image: */
+		  img.style.width = x + "px";
+		  /* Position the slider: */
+		  slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+		}
+	  }
+	}
 	</script>
 
 	<div class="banner"><img src="Knight.jpg" alt="Knights on horseback" width="100%" height="300"></div>
@@ -942,7 +1136,7 @@
 			<a id="dc1b" class="dc" onclick = "lgtext()" onmouseover="dcn1b()" onmouseout="hoff()" style="border-right: initial; cursor: zoom-in">Large Text</a>
 		  </div>
 	  </li>
-	  <li id="l2" class="nondrop" onmouseover="hn4()" onmouseout="hoff()"><a id="a4" class="nd" onclick="c4()" href="KushCV.pdf" target="_blank" style="border-right: initial">CV</a></li>
+	  <li id="l2" class="nondrop" onmouseover="hn4()" onmouseout="hoff()"><a id="a4" class="nd" onclick="c4()" href="CVs/KushCV.pdf" target="_blank" style="border-right: initial">CV</a></li>
 	  <li id="l3" class="dropdown">
 		<a id="a3" onmouseover="hn3()" onmouseout="hoff()" class="dropbtn">Projects</a>
 		<div class="dropdown-content">
@@ -965,7 +1159,7 @@
 	<div onmouseover="cid1()" onscroll="cid1()">
 	<center><div id="cla1" class="bl"><div id="cla11" class="b2">
 	<br id="about"><br><br><br>
-	<h1 id="hab" style="position: absolute; top: 20px; left: 45%;">About</h1>
+	<h1 id="hab" style="position: absolute; top: 20px; ">About</h1>
 	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester. This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
 	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
 	 You can see my CV by clicking the tab on the right side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
@@ -995,7 +1189,7 @@
 	<br id="wo3"><br><br>
 	<h3>Utility Systems</h3>
 	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
-	<br><br>I have attached some of my current energy system work: <br><a id="li3" class="lin" href="USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> and <a id="li4" class="lin" href="SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
+	<br><br>I have attached some of my current energy system work: <br><a id="li3" class="lin" href="docs/USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> and <a id="li4" class="lin" href="docs/SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
 	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
 	<br><br id="mi"><br><br>
 	<h3>Miscellaneous I.</h3>
@@ -1003,28 +1197,28 @@
 	Limited to four cards to highlight my most significant, meaningful work with special attention for the <a class="lin" href="#wo">work I am most proud of</a>.</p>
 	<br><br>
 		<div class="card" onclick="wo()">
-		  <img src="Knight.jpg" alt="Photoshop" class="CI">
+		  <img src="Knight.jpg" alt="Placeholder 1" class="CI">
 		  <div class="container">
-			<h4><b>Placeholder</b></h4> 
+			<h4><b>Placeholder 1</b></h4> 
 			<p>A few examples of before and after</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wt()">
-		  <img src="Knight.jpg" alt="Photoshop" class="CI">
+		  <img src="Knight.jpg" alt="Placeholder 2" class="CI">
 		  <div class="container">
-			<h4><b>Placeholder </b></h4>
+			<h4><b>Placeholder 2</b></h4>
 			<p>A few examples of before and after</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wth()">
-		  <img src="Knight.jpg" alt="Photoshop" class="CI">
+		  <img src="Knight.jpg" alt="Placeholder 3" class="CI">
 		  <div class="container">
-			<h4><b>Placeholder</b></h4> 
+			<h4><b>Placeholder 3</b></h4> 
 			<p>A few examples of before and after</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wf()">
-		  <img src="Knight.jpg" alt="Photoshop" class="CI">
+		  <img src="imgs/UtilitySystem.jpg" alt="Utility Systems" class="CI">
 		  <div class="container">
 			<h4><b>Utility Systems</b></h4> 
 			<p>Design and analysis of utility systems</p> 
@@ -1037,114 +1231,111 @@
 	<h1>Projects</h1>
 	<h3>MineS in C#</h3>
 	<p>One great thing about programming is that you can be as creative as you want.
-	This is my adaptation of MineSweeper called <a id="li5" class="lin" href="MineS.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes.<br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
+	This is my adaptation of MineSweeper called <a id="li5" class="lin" href="docs/MineS Installer.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes.<br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
+	<br><br>To play the game, download and unzip the installer. Run the installer; within the game folder is the application "MineS".
+	<br>I have now added an <a href="https://kush-kotecha.github.io/MineS/" class="lin" target="_blank">online scoreboard</a>.
 	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper).</p>
-	<p>I have now added an <a href="https://kush-kotecha.github.io/MineS/" class="lin">online scoreboard</a>.</p>
 	<br><br id="ma"><br><br>
 	<h3>PBR in Matlab</h3>
 	<p>For my 3&#x02B3;&#x1D48; year design project, I modelled a <a id="li6" class="dropdown" href="https://uk.mathworks.com/matlabcentral/fileexchange/132078-packed-bed-reactor-toluene-methylation-to-produce-p-xylene?s_tid=prof_contriblnk" target="_blank">packed bed reactor in MATLAB
-	<img id="im" class="dropdown-content" style="position: absolute; width: 340px; height: 180px; left: 60%; border-radius: 6px; border-width: 1.5px; border-style: solid; border-color: #555;" src="PBR.jpg">
+	<img id="im" class="dropdown-content" style="position: absolute; width: 340px; height: 180px; left: 58%; border-radius: 6px; border-width: 1.5px; border-style: solid; border-color: #555;" src="imgs/PBR.jpg">
 	</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
 	<br><br><br><br id="mit">
 	<h3>Miscellaneous II.</h3>
 	<p>Here are some other projects I have worked on.</p>
 	<br>
+	<div id="ct1" class="cartinf" onclick="po()">
+	   <img src="imgs/PSLogo.jpg" alt="Photoshop" class="CI">
+	   <div class="container">
+		  <h4><b>Photoshop</b></h4>
+	      <p>Different photoshop techniques</p> 
+		  </div>
+	</div>
+	<div id="ct2" class="cartrt" onclick="pt()">
+		<img src="Knight.jpg" alt="Placeholder 2" class="CI">
+		<div class="container">
+		  <h4><b>Placeholder 2</b></h4> 
+		  <p>A few examples of before and after</p> 
+		</div>
+	</div>
+	<div id="ct3" class="cartro" onclick="pth()">
+	   <img src="Knight.jpg" alt="Placeholder 3" class="CI">
+	   <div class="container">
+		  <h4><b>Placeholder 3</b></h4> 
+		  <p>A few examples of before and after</p> 
+	   </div>
+	</div>
 	<div id="ct4" class="cartbac" onclick="pf()">
-		<img src="Knight.jpg" alt="Photoshop" class="CI">
+		<img src="Knight.jpg" alt="Placeholder 4" class="CI">
 		<div class="container">
 		  <h4><b>Placeholder 4</b></h4> 
 		  <p>A few examples of before and after</p> 
 		</div>
 	</div>
 	<div id="ct5" class="cartlt" onclick="pfi()">
-		<img src="Knight.jpg" alt="Photoshop" class="CI">
+		<img src="Knight.jpg" alt="Placeholder 5" class="CI">
 		<div class="container">
 		  <h4><b>Placeholder 5</b></h4> 
 		  <p>A few examples of before and after</p> 
 		</div>
 	</div>
 	<div id="ct6" class="cartlo" onclick="ps()">
-	   <img src="Knight.jpg" alt="Photoshop" class="CI">
+	   <img src="Knight.jpg" alt="Placeholder 6" class="CI">
 	   <div class="container">
 		  <h4><b>Placeholder 6</b></h4> 
 		  <p>A few examples of before and after</p> 
 	   </div>
 	</div>
-	<div id="ct3" class="cartro" onclick="pth()">
-	   <img src="Knight.jpg" alt="Photoshop" class="CI">
-	   <div class="container">
-		  <h4><b>Placeholder 3</b></h4> 
-		  <p>A few examples of before and after</p> 
-	   </div>
-	</div>
-	<div id="ct2" class="cartrt" onclick="pt()">
-		<img src="Knight.jpg" alt="Photoshop" class="CI">
-		<div class="container">
-		  <h4><b>Placeholder 2</b></h4> 
-		  <p>A few examples of before and after</p> 
-		</div>
-	</div>
-	<div id="ct1" class="cartinf" onclick="po()">
-	   <img src="Knight.jpg" alt="Photoshop" class="CI">
-	   <div class="container">
-		  <h4><b>Photoshop</b></h4> 
-	      <p>A few examples of before and after</p> 
-		  </div>
-	</div>
 	<div id="ct7" class="carthido" onclick="pse()">
-	   <img src="Knight.jpg" alt="Photoshop" class="CI">
+	   <img src="Knight.jpg" alt="Placeholder 7" class="CI">
 	   <div class="container">
 		  <h4><b>Placeholder 7</b></h4> 
 	      <p>A few examples of before and after</p> 
 		  </div>
 	</div>
 	<br>
-	<div class="pagination" >
-	<a href="javascript:void(0)" onclick="lef()">&laquo;</a>
-	<a id="pag1" href="javascript:void(0)" onclick="pago()" style="background-color: #ddd;">1</a>
+	<div class="pagination">
+	<a href="javascript:void(0)" onclick="lef()" style="background-color: #ddd;">&laquo;</a>
+	<a id="pag1" href="javascript:void(0)" onclick="pago()">1</a>
 	<a id="pag2" href="javascript:void(0)" onclick="pagt()">2</a>
 	<a id="pag3" href="javascript:void(0)" onclick="pagth()">3</a>
 	<a id="pag4" href="javascript:void(0)" onclick="pagf()">4</a>
 	<a id="pag5" href="javascript:void(0)" onclick="pagfi()">5</a>
 	<a id="pag6" href="javascript:void(0)" onclick="pags()">6</a>
 	<a id="pag7" href="javascript:void(0)" onclick="pagse()">7</a>
-	<a href="javascript:void(0)" onclick="rig()">&raquo;</a>
-	</div>
+	<a href="javascript:void(0)" onclick="rig()" style="background-color: #ddd;">&raquo;</a>
 	</div>
 	
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	</div></div></center>
+	</div></div></div></center>
 	
 	<div id="myNav" class="overlay">
 	  <a id="cb1" href="#mi" class="closebtn" onclick="closeNav()">&times;</a>
 	  <div id="wc1" class="overlay-content">
-	    <p style="color:white">Wc1<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+	    <h1>Placeholder 1</h1>
+	    <p style="color:white">Wc1<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="wc2" class="overlay-content">
-	    <p style="color:white">Wc2<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+	    <h1>Placeholder 2</h1>
+	    <p style="color:white">Wc2<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="wc3" class="overlay-content">
-	    <p style="color:white">Wc3<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+	    <h1>Placeholder 3</h1>
+	    <p style="color:white">Wc3<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="wc4" class="overlay-content">
 		<h1>Utility Systems</h1>
 		<br class="exc">
 		<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
-		<br><br><br class="exc">I have attached some of my current energy system work: <br><br><a href="USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> &amp; <a href="SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
+		<br><br><br class="exc">I have attached some of my current energy system work: <br><br><a href="docs/USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> &amp; <a href="docs/SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
 		<br><br class="exc">Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
 	  </div>
 	</div>
@@ -1153,55 +1344,107 @@
 	  <a id="cb2" href="#mit" class="closebtn" onclick="closeNavt()">&times;</a>
 	  <div id="pc1" class="overlay-content">
 		<h1>Photoshop</h1>
-	    <p id="ptemp" style="color:white">PC1<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+	    <p style="color:white">I decided to learn some basic image editing skills using photoshop. This included masking &amp; layers, curves &amp; levels for hues and exposure, and non-destructive editing (removing distractions &amp; fixing blemishes). 
+		Below is a series of images taken around Chester and Wales on my trusty Huawei P20 Mate Pro; the photos were taken with the aim of implementing techniques from tutorials created by Aaron Nace of PHLEARN for which I have attached the link below.<br></p>
+	  </div>
+	  <div id="pc1i" style="">
+	  	<div class="img-comp-container" style="margin-top: 10%; margin-left: 7%;">
+		  <div class="img-comp-img">
+			<img src="imgs/BerriesPos.jpg" width="300px" height="400px">
+		  </div>
+		  <div class="img-comp-img img-comp-overlay">
+			<img src="imgs/BerriesPre.jpg" width="300px" height="400px">
+		  </div>
+		</div>
+		<div class="img-comp-container" style="">
+		  <div class="img-comp-img">
+			<img src="imgs/BoatPos.jpg" width="300px" height="400px">
+		  </div>
+		  <div class="img-comp-img img-comp-overlay">
+			<img src="imgs/BoatPre.jpg" width="300px" height="400px">
+		  </div>
+		</div>
+		<div class="img-comp-container" style="">
+		  <div class="img-comp-img">
+			<img src="imgs/PurplePos.jpg" width="300px" height="400px">
+		  </div>
+		  <div class="img-comp-img img-comp-overlay">
+			<img src="imgs/PurplePre.jpg" width="300px" height="400px">
+		  </div>
+		</div>
+		<br>
+		<div class="img-comp-container" style="margin-top: 10%; margin-left: 7%;">
+		  <div class="img-comp-img">
+			<img src="imgs/DandelionPos.jpg" width="300px" height="400px">
+		  </div>
+		  <div class="img-comp-img img-comp-overlay">
+			<img src="imgs/DandelionPre.jpg" width="300px" height="400px">
+		  </div>
+		</div>
+		<div class="img-comp-container" style="">
+		  <div class="img-comp-img">
+			<img src="imgs/HousePos.jpg" width="300px" height="400px">
+		  </div>
+		  <div class="img-comp-img img-comp-overlay">
+			<img src="imgs/HousePre.jpg" width="300px" height="400px">
+		  </div>
+		</div>
+		<div class="img-comp-container" style="">
+		  <div class="img-comp-img">
+			<img src="imgs/HorsePos.jpg" width="300px" height="400px">
+		  </div>
+		  <div class="img-comp-img img-comp-overlay">
+			<img src="imgs/HorsePre.jpg" width="300px" height="400px">
+		  </div>
+		</div>
+	  <div id="pc1b" class="overlay-content">
+	  <a style="top: -10%;;" href="https://youtube.com/playlist?list=PL7JpMMpENaD3KL_lvmw4eS5U5AD746yKB&si=YXRhgqFy7I-lYdBY" target="_blank">PHLEARN: Master Photoshop in 30 days</a>
+	  <p style="margin-bottom: 30px;">It is a very beginner-friendly guide - uses appropriate examples, showing the whole process, and teaches you how and when to use the available tools in order to achieve the desired effects.</p>
+	  </div>
 	  </div>
 	  <div id="pc2" class="overlay-content">
-	    <p style="color:white">PC2<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<h1>Placeholder 2</h1>
+	    <p style="color:white">PC2<br>Some description</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="pc3" class="overlay-content">
-	    <p style="color:white">PC3<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<h1>Placeholder 3</h1>
+	    <p style="color:white">PC3<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="pc4" class="overlay-content">
-	    <p style="color:white">PC4<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<h1>Placeholder 4</h1>
+	    <p style="color:white">PC4<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="pc5" class="overlay-content">
-	    <p style="color:white">PC5<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<h1>Placeholder 5</h1>
+	    <p style="color:white">PC5<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="pc6" class="overlay-content">
-	    <p style="color:white">PC6<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<h1>Placeholder 6</h1>
+	    <p style="color:white">PC6<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	  <div id="pc7" class="overlay-content">
-	    <p style="color:white">PC7<br>Writing</p>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
+		<h1>Placeholder 7</h1>
+	    <p style="color:white">PC7<br>Some content</p>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
 	  </div>
 	</div>
 </body>
+<script>
+higt();
+initComparisons();
+document.getElementById("pc1i").style.display = "none";
+</script>
+
 
 </html>
