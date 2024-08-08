@@ -7,6 +7,10 @@
 	font-family: Georgia, Times New Roman, serif;
 	}
 	
+	body{
+	font-size: 18px;
+	}
+	
 	.navi {
 	  list-style-type: none;
 	  margin: 0;
@@ -192,7 +196,7 @@
 	
 	.ti {
 	position: relative;
-}
+	}
 
 	.tit {
 	visibility: hidden;
@@ -318,11 +322,6 @@
 	  cursor: pointer;
 	}
 	
-	.cartinf:hover {
-	  transition: 0.3s;
-	  box-shadow: 0 6px 10px 0 gray;
-	}
-	
 	.carthido {
 	  transition: 1.5s ease-out;
 	  width: 20%;
@@ -350,10 +349,14 @@
 	  padding: 0px 12px 4px 12px;
 	}
 	
+	.container h4 {
+	margin-top: 13px;
+	}
+	
 	.container p {
 	text-align: left;
 	padding: 0px 0px 0px 0px;
-	margin-top: 0px;
+	margin-top: -5px;
 	}
 	
 	.overlay {
@@ -485,7 +488,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Kush Kotecha">
-<meta name="keywords" content="Epic, EPIC, Chemical, Engineering, Engineer, Bloatlord, Energy">
+<meta name="keywords" content="Kush, Kotecha, Epic, EPIC, Chemical, Engineering, Engineer, Bloatlord, Energy">
 <title>Kush Kotecha Profile Page</title>
 </head>
 
@@ -687,11 +690,11 @@
 				document.getElementById("a4").href = "CVs/KushCVA.pdf";	
 			 }
 			 if (lg=="n" && inv == "n") {
-			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page and increase the text size on the left side of the navigation bar";
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colours of the page and increase the text size on the left side of the navigation bar";
 			 	document.getElementById("a4").href = "CVs/KushCV.pdf";	
 			 }
 			 if (lg=="y" && inv == "n") {
-			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colors of the page on the left side of the navigation bar";
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, you can invert the colours of the page on the left side of the navigation bar";
 			    document.getElementById("a4").href = "CVs/KushCVL.pdf";
 			 }
 			 if (lg=="y" && inv == "y") {
@@ -1160,9 +1163,9 @@
 	<center><div id="cla1" class="bl"><div id="cla11" class="b2">
 	<br id="about"><br><br><br>
 	<h1 id="hab" style="position: absolute; top: 20px; ">About</h1>
-	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester. This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
-	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.
-	 You can see my CV by clicking the tab on the right side of the navigation bar; accessibility changes to the webpage are automatically applied to the file.</p>
+	<p>Welcome to my profile page. My name is Kush Kotecha and I am a chemical engineering graduate (MEng) from University of Manchester.
+	 <br>This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
+	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.</p>
 	 Contact: <a id="em" class="lin" href="mailto:kush.kotecha.kk@gmail.com">kush.kotecha.kk@gmail.com</a><br id="wo2"><br><br id="wo1">
 	</div></div></center>
 	<h2 id="acc" style="text-align:center">If the text above is difficult to read, you can invert the colours of the page and increase the text size on the left-hand side of the navigation bar</h2>
@@ -1188,7 +1191,7 @@
 	</div><br><span id="tip" style="color: #8c8c8c;" class="mag" onmouseout="op()">Tip: Keep the mouse on the link and scroll onto the textbox<br>You can resize the textbox from the bottom right corner</span></p>
 	<br id="wo3"><br><br>
 	<h3>Utility Systems</h3>
-	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
+	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around sustainable energy, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
 	<br><br>I have attached some of my current energy system work: <br><a id="li3" class="lin" href="docs/USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> and <a id="li4" class="lin" href="docs/SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
 	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
 	<br><br id="mi"><br><br>
@@ -1231,10 +1234,11 @@
 	<h1>Projects</h1>
 	<h3>MineS in C#</h3>
 	<p>One great thing about programming is that you can be as creative as you want.
-	This is my adaptation of MineSweeper called <a id="li5" class="lin" href="docs/MineS Installer.zip">MineS.zip (Installer)</a> written in C# which contains the normal game along with 6 other game modes.<br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
+	This is my adaptation of MineSweeper called <a id="li5" class="lin" href="docs/MineS Installer.zip">MineS (Installer)</a> written in C# which contains the normal game along with 6 other modes.
+	<br>Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
-	<br><br>To play the game, download and unzip the installer. Run the installer; within the game folder is the application "MineS".
-	<br>I have now added an <a href="https://kush-kotecha.github.io/MineS/" class="lin" target="_blank">online scoreboard</a>.
+	<br><br>To play, download and unzip the installer. Run the installer; within the game folder is the application "MineS".
+	<br>I have now added an <a href="https://kush-kotecha.github.io/MineS/" class="lin" target="_blank">online scoreboard</a> which also implements SQL and HTML, CSS, and JS.
 	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper).</p>
 	<br><br id="ma"><br><br>
 	<h3>PBR in Matlab</h3>
@@ -1242,10 +1246,9 @@
 	<img id="im" class="dropdown-content" style="position: absolute; width: 340px; height: 180px; left: 58%; border-radius: 6px; border-width: 1.5px; border-style: solid; border-color: #555;" src="imgs/PBR.jpg">
 	</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
-	<br><br><br><br id="mit">
+	<br><br><br id="mit"><br>
 	<h3>Miscellaneous II.</h3>
 	<p>Here are some other projects I have worked on.</p>
-	<br>
 	<div id="ct1" class="cartinf" onclick="po()">
 	   <img src="imgs/PSLogo.jpg" alt="Photoshop" class="CI">
 	   <div class="container">
@@ -1308,7 +1311,7 @@
 	<a href="javascript:void(0)" onclick="rig()" style="background-color: #ddd;">&raquo;</a>
 	</div>
 	
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div></div></div></center>
 	
 	<div id="myNav" class="overlay">
