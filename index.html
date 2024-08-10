@@ -54,10 +54,6 @@
 	  color: black;
 	  opacity: 0;
 	}
-	
-	.banner-text:hover{
-	  transform: translate(30%,30%);
-	}
 
 	.navi li {
 	  float: right;
@@ -155,6 +151,7 @@
 	 rotate: 180deg;
 	 position: relative;
 	 z-index: -10;
+	 padding-bottom: 525px;
 	}
 	
 	.tt {
@@ -278,9 +275,9 @@
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
-	  position: absolute;
+	  position: fixed;
 	  left: 40%;
-	  bottom: 0%;
+	  bottom: 225px;
 	  z-index: 120;
 	  filter: brightness(25%);
 	  background-color: #d5d5d5;
@@ -294,8 +291,8 @@
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
 	  left: 27.5%;
-	  bottom: -4%;
-	  position: absolute;
+	  bottom: 125px;
+	  position: fixed;
 	  z-index: 160;
 	  filter: brightness(60%);
 	  background-color: #d5d5d5;
@@ -308,9 +305,9 @@
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
-	  position: absolute;
+	  position: fixed;
 	  left: 52.5%;
-	  bottom: -2%;
+	  bottom: 175px;
 	  z-index: 140;
 	  filter: brightness(40%);
 	  background-color: #d5d5d5;
@@ -324,8 +321,8 @@
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
 	  left: 27.5%;
-	  bottom: -2%;
-	  position: absolute;
+	  bottom: 175px;
+	  position: fixed;
 	  z-index: 140;
 	  filter: brightness(40%);
 	  background-color: #d5d5d5;
@@ -338,9 +335,9 @@
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
-	  position: absolute;
+	  position: fixed;
 	  left: 52.5%;
-	  bottom: -4%;
+	  bottom: 125px;
 	  z-index: 160;
 	  filter: brightness(60%);
 	  background-color: #d5d5d5;
@@ -353,9 +350,9 @@
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
-	  position: absolute;
+	  position: fixed;
 	  left: 40%;
-	  bottom: -6%;
+	  bottom: 75px;
 	  z-index: 190;
 	  filter: brightness(110%);
 	  background-color: #d5d5d5;
@@ -370,9 +367,9 @@
 	  box-shadow: 0px 3px 10px 0 #af002a;
 	  display: block;
 	  visibility: hidden;
-	  position: absolute;
+	  position: fixed;
 	  left: 27.5%;
-	  bottom: -4%;
+	  bottom: 125px;
 	  z-index: 160;
 	  filter: brightness(80%);
 	  background-color: #d5d5d5;
@@ -429,7 +426,7 @@
 		display: block;
 		position: absolute;
 		left: 31%;
-		bottom: -8.2%;
+		bottom: 10px;
 		z-index: 2;}
 		
 
@@ -1278,6 +1275,7 @@
 	<br><br><br id="mit"><br>
 	<h3>Miscellaneous II.</h3>
 	<p>Here are some other projects I have worked on.</p>
+	<div id="carousel">
 	<div id="ct1" class="cartinf" onclick="po()">
 	   <img src="imgs/PSLogo.jpg" alt="Photoshop" class="CI">
 	   <div class="container">
@@ -1327,6 +1325,7 @@
 	      <p>A few examples of before and after</p> 
 		  </div>
 	</div>
+	</div>
 	<br>
 	<div class="pagination">
 	<a href="javascript:void(0)" onclick="lef()" style="background-color: #ddd;">&laquo;</a>
@@ -1340,7 +1339,6 @@
 	<a href="javascript:void(0)" onclick="rig()" style="background-color: #ddd;">&raquo;</a>
 	</div>
 	
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div></div></div></center>
 	
 	<div id="myNav" class="overlay">
