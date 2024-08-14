@@ -15,23 +15,26 @@
 	
 	function st(){
 	  cChang("banner-text", "opacity", "1");
-	  cChang("banner-text", "transform", "translate(-50%,-50%)");
+	  cChang("banner-text", "transform", "translate(15vw, 5vh)");
 	}
 
 	function invert() {
 		if (inv == "n")
 			{inv = "y";
 			txChange();
-			 document.body.style.backgroundColor = "#003153";
+			 document.body.style.backgroundColor = "#002042";
 			 document.body.style.color = "#efefef";
-			 document.getElementById("d1").style.backgroundColor = "#602f6b";
+			 cChang("banner", "background-Color", "#002042");
+			 document.getElementById("d1").style.backgroundColor = "#401d49";
 			 cChang("dc", "background-Color", "#555555");
 			 cChang("dc", "color", "#efefef");
-			 cChang("dropbtn", "background-Color", "#602f6b");
+			 cChang("dropbtn", "background-Color", "#401d49");
 			 cChang("dropbtn", "color", "#efefef");
-			 cChang("nd", "background-Color", "#602f6b");
+			 cChang("nd", "background-Color", "#401d49");
 			 cChang("nd", "color", "#efefef");
 			 cChang("lin", "color", "yellow");
+			 cChang("b1", "background-color", "#001031");
+			 cChang("b1t", "background-color", "#001031");
 			 document.getElementById("li1").style.color = "yellow";
 			 document.getElementById("li1").style.borderBottom = "1px dotted yellow";
 			 document.getElementById("tip").style.color = "#f0e6ac";
@@ -67,6 +70,7 @@
 			txChange();
 			 document.body.style.backgroundColor = "";
 			 document.body.style.color = "";
+			 cChang("banner", "background-color", "");
 			 document.getElementById("d1").style.backgroundColor = "";
 			 cChang("dc", "background-Color", "");
 			 cChang("dc", "color", "");
@@ -75,6 +79,8 @@
 			 cChang("nd", "background-Color", "");
 			 cChang("nd", "color", "");
 			 cChang("lin", "color", "");
+			 cChang("b1", "background-color", "");
+			 cChang("b1t", "background-color", "");
 			 document.getElementById("li1").style.color = "";
 			 document.getElementById("li1").style.borderBottom = "";
 			 document.getElementById("tip").style.color = "#8c8c8c";
@@ -125,6 +131,9 @@
 		{lg = "y";
 		txChange();
 		document.body.style.fontSize = "160%";
+		cChang("banner-text", "transform", "translate(10vw, -5vh)");
+		document.getElementById("htimg").style.transform = "translate(45vw, -33vh)";
+	    cChang("banner-text", "transition", "none");
 		document.getElementById("cla1").style.width = "90vw";
 		document.getElementById("cla11").style.width = "90vw";
 		document.getElementById("cla2").style.width = "90vw";
@@ -158,11 +167,13 @@
 		{lg = "n";
 		 txChange();
 		 document.body.style.fontSize = "";
+		 cChang("banner-text", "transform", "translate(15vw, 5vh)");
+		 document.getElementById("htimg").style.transform = "translate(40vw, -30vh)";
 		 document.getElementById("cla1").style.width = "";
 		 document.getElementById("cla11").style.width = "";
 		 document.getElementById("cla2").style.width = "";
 		 document.getElementById("cla22").style.width = "";
-		 document.getElementById("hab").style.left = "45%";
+		 document.getElementById("hab").style.left = "";
 		 document.getElementById("im").style.width = "340px";
 		 document.getElementById("im").style.height = "180px";
 		 document.getElementById("im").style.left = "60%";
@@ -223,7 +234,7 @@
 	function hon() {
 	   if (inv == "y") {
 	    if (ide2 != ide) {
-	       document.getElementById(ide2).style.backgroundColor = "#d6cadd";}}}
+	       document.getElementById(ide2).style.backgroundColor = "#200b28";}}}
 		   
 	function hoff() {
 		if (inv == "y") {
@@ -232,7 +243,7 @@
 		else if (dro=="y")
 		{document.getElementById(ide2).style.backgroundColor = "#555555";
 		 document.getElementById(ide2).style.color = "white"}
-		else {document.getElementById(ide2).style.backgroundColor = "#602f6b";}
+		else {document.getElementById(ide2).style.backgroundColor = "#401d49";}
 		}}
 	
 	function hn5() {
@@ -321,7 +332,7 @@
 	hig();}
 	
 	function ret() {
-		document.getElementById(ide2).style.backgroundColor = "#d6cadd";
+		document.getElementById(ide2).style.backgroundColor = "#200b28";
 		document.getElementById(ide2).style.color = "white";
 		document.getElementById(ide2).style.transition = "background-color 0.2s, color 0.2s";}
 	
@@ -358,7 +369,7 @@
 		document.getElementById(ide).style.padding = "13.5px 18px";
 		document.getElementById(ide).style.color = "";}
 		else {
-		document.getElementById(ide).style.backgroundColor = "#602f6b";
+		document.getElementById(ide).style.backgroundColor = "#401d49";
 		document.getElementById(ide).style.padding = "13.5px 18px";
 		document.getElementById(ide).style.color = "white";}
 	}

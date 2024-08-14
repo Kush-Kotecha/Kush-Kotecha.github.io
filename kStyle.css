@@ -1,13 +1,24 @@
-	*{
-	font-family: Georgia, Times New Roman, serif;
-	}
-	
 	body{
 	font-size: 120%;
+	background-color: #222;
+	font-family: "EB Garamond", Garamond, serif;
+	margin: 0;
+	padding: 0;
+	}
+	
+	h1, h2, h3, h4, h5, h6{
+	font-family: Georgia;
 	}
 	
 	#htname{
-	font-size: 270%;
+	font-size: 350%;
+	font-family: "MonteCarlo";
+	word-spacing: 2vw;
+	}
+	
+	#htbot{
+	margin-top: -5vh;
+	font-family: Georgia;
 	}
 	
 	.navi {
@@ -20,14 +31,16 @@
 	  position: sticky;
 	  position: -webkit-sticky;
 	  top: 0;
-	  width: 98vw;
+	  width: 100%;
 	  z-index: 100;
+	  font-family: Georgia;
 	}
 	
 	.banner {
 	 width: 98vw;
 	 height: 50vh;
 	 overflow: hidden;
+	 background-color: #222;
 	 background-position: center;
 	 background-repeat: no-repeat;
 	 background-size: cover;
@@ -35,23 +48,28 @@
 	}
 	
 	.banner img {
-	transition: scale 1s ease-in-out;
-	transform-origin: 30% 40%;
+	width: 20vw;
+	height: 35vh;
+	transform: translate(40vw, -30vh);
+	border-radius: 5px;
 	}
 
 	.banner:hover img{
-     scale: 2.5;
+     scale: 1;	
+	 transition: scale 1s ease-in-out;
+	 transform-origin: 30% 40%;
 	}
 	
 	.banner-text{
 	  text-align: center;
 	  position: absolute;
-	  top: 50%;
-	  left: 30%;
-	  transform: translate(-50%, 100%);
+	  transform: translate(15vw, 50vh);
 	  transition: transform 2s, opacity 3s;
-	  color: black;
+	  color: #cca01d;
 	  opacity: 0;
+	  font-style: italic;
+	  margin-right: 0px;
+	  margin-left: 0px;
 	}
 
 	.navi li {
@@ -112,26 +130,28 @@
 	  color: #cca01d;
 	}
 	
-	.bl {
-	 box-shadow: 8px 5px 4px -4px rgba(0,0,0,0.3) inset;
+	.b1 {
+	 box-shadow: 8px 8px 4px -4px rgba(0,0,0,0.3) inset;
 	 width: 80vw;
 	 rotate: 180deg;
 	 position: relative;
+	 background-color: #ddd;
 	}
 	
-	.blt {
+	.b1t {
 	 box-shadow: 8px 0px 4px -4px rgba(0,0,0,0.3) inset;
 	 width: 80vw;
 	 rotate: 180deg;
 	 position: relative;
+	 background-color: #ddd;
 	}
 	
-	.bl p, .blt p {
+	.b1 p, .b1t p {
 	 padding-right: 30px;
 	 padding-left: 30px;
 	}
 	
-	.bl a, .blt a {
+	.b1 a, .b1t a {
 	 color: #af002a;
 	 font-style: oblique;
 	}
@@ -145,7 +165,7 @@
 	}
 	
 	.b2t {
-	 box-shadow: 8px 5px 4px -4px rgba(0,0,0,0.3) inset;
+	 box-shadow: 8px 8px 4px -4px rgba(0,0,0,0.3) inset;
 	 width: 80vw;
 	 rotate: 180deg;
 	 position: relative;
@@ -236,10 +256,11 @@
 	  border-radius: 5px;
 	  box-shadow: 3px 3px 10px 0 #af002a;
 	  display: inline-block;
-	  margin: 7.5px;
+	  margin: 0.75vw;
 	  filter: brightness(80%);
 	  background-color: #d5d5d5;
 	  cursor: pointer;
+	  border: 1px solid #111;
 	}
 
 	.card:hover {
@@ -280,6 +301,7 @@
 	  z-index: 120;
 	  filter: brightness(25%);
 	  background-color: #d5d5d5;
+	  border: 1px solid #111;
 	}
 	
 	.cartlo {
@@ -287,7 +309,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #111;
 	  display: block;
 	  left: 27.5%;
 	  bottom: 125px;
@@ -295,6 +317,7 @@
 	  z-index: 160;
 	  filter: brightness(60%);
 	  background-color: #d5d5d5;
+	  border: 1px solid #111;
 	}
 	
 	.cartro {
@@ -302,7 +325,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #111;
 	  display: block;
 	  position: fixed;
 	  left: 52.5%;
@@ -310,6 +333,7 @@
 	  z-index: 140;
 	  filter: brightness(40%);
 	  background-color: #d5d5d5;
+	  border: 1px solid #111;
 	}
 	
 	.cartlt {
@@ -317,7 +341,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #111;
 	  display: block;
 	  left: 27.5%;
 	  bottom: 175px;
@@ -325,6 +349,7 @@
 	  z-index: 140;
 	  filter: brightness(40%);
 	  background-color: #d5d5d5;
+	  border: 1px solid #111;
 	}
 	
 	.cartrt {
@@ -332,7 +357,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #111;
 	  display: block;
 	  position: fixed;
 	  left: 52.5%;
@@ -340,6 +365,7 @@
 	  z-index: 160;
 	  filter: brightness(60%);
 	  background-color: #d5d5d5;
+	  border: 1px solid #111;
 	}
 	
 	.cartinf {
@@ -356,6 +382,7 @@
 	  filter: brightness(110%);
 	  background-color: #d5d5d5;
 	  cursor: pointer;
+	  border: 1px solid #111;
 	}
 	
 	.carthido {
@@ -363,7 +390,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #111;
 	  display: block;
 	  visibility: hidden;
 	  position: fixed;
@@ -372,6 +399,7 @@
 	  z-index: 160;
 	  filter: brightness(80%);
 	  background-color: #d5d5d5;
+	  border: 1px solid #111;
 	}
 	
 	.overlay {
@@ -435,7 +463,7 @@
 	  padding: 8px 16px;
 	  text-decoration: none;
 	  transition: background-color .3s;
-	  border: 1px solid #ddd;
+	  border: 1px solid #111;
 	}
 
 	.pagination a:hover {
@@ -451,6 +479,8 @@
 	
 	#hab {
 	left: 44%;
+	position: absolute;
+	top: 5vh;
 	}
 	
 	@media only screen and (min-width: 2000px) {

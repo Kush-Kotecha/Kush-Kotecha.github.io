@@ -6,17 +6,20 @@
 <meta name="author" content="Kush Kotecha">
 <meta name="keywords" content="Kush, Kotecha, Epic, EPIC, Chemical, Engineering, Engineer, Bloatlord, Energy">
 <link rel="stylesheet" href="kStyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=MonteCarlo">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB Garamond">
 <title>Kush Kotecha Profile Page</title>
 </head>
 
 <body>
 	<script src="kJava.js" type="text/javascript"></script>
-	<noscript>Sorry, your browser does not support JavaScript! Please try viewing the webpage in another browser for full functionality.</noscript>
+	<noscript>Sorry, your browser does not support JavaScript! Please try viewing the webpage in another browser for full functionality of the webpage.</noscript>
 
-	<div class="banner"><img src="imgs/Placeholder.jpg" alt="imgs/Placeholders on horseback" width="100%" height="100%">
+	<div class="banner">
 	<div onload="st()" class="banner-text">
     <h1 id="htname">Kush Kotecha</h1>
-    <p>Chemical Engineering Graduate</p>
+    <p id="htbot">Chemical Engineering Graduate</p>
+	<img id="htimg" src="imgs/Placeholder.jpg">
     </div>
     </div>
 	<div id="d1" class="navi">
@@ -48,21 +51,21 @@
 	</div>
 
 	<div onmouseover="cid1()" onscroll="cid1()">
-	<center><div id="cla1" class="bl"><div id="cla11" class="b2">
+	<center><div id="cla1" class="b1"><div id="cla11" class="b2">
 	<br id="about"><br><br><br>
-	<h1 id="hab" style="position: absolute; top: 20px;">About</h1>
+	<h1 id="hab">About</h1>
 	<p>Welcome to my profile page.
-	 This page contains examples of my work in chemical engineering and other projects I have done in my spare time.
+	 I built this page as a way to showcase examples of my work in chemical engineering and other projects I have done in my spare time.
 	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.</p>
 	 Contact: <a id="em" class="lin" href="mailto:kush.kotecha.kk@gmail.com">kush.kotecha.kk@gmail.com</a><br id="wo2"><br><br id="wo1">
 	</div></div></center>
-	<h2 id="acc" style="text-align:center">If the text above is difficult to read, try the accessibility features on the left side of the navigation bar; changes are automatically applied to the CV</h2>
+	<h2 id="acc" style="text-align:center; color: white;">If the text above is difficult to read, try the accessibility features on the left side of the navigation bar; changes are automatically applied to the CV</h2>
 	
-	</div><center><div id="cla22" class="blt"><div id="cla2" class="b2t">
+	</div><center><div id="cla22" class="b1t"><div id="cla2" class="b2t">
 	
 	<div onmouseover="cid2()" onscroll="cid2()">
     <br id="wo">
-	<h1 style="padding-top: 30px">Work</h1>
+	<h1 style="padding-top: 30px; padding-bottom: 20px;">Work</h1>
 	<h3>Dissertation</h3>
 	<p>My dissertation topic was <a id="li0" class="lin" href="Wettability.pdf" target="_blank">Wettability of aqueous LiTFSI on graphite using Molecular Dynamics (currently not available)</a> in relation to energy storage systems.
 	<br><br>The initial report contains a discussion of sustainable energy storage technologies, including the different components within a supercapacitor and a focus on aqueous electrolytes.
@@ -85,27 +88,27 @@
 	<br><br id="mi"><br><br>
 	<h3>Miscellaneous I.</h3>
 	<p>Currently, the cards below are empty. In the future, they will contain industry-relevant work.<br>
-	Limited to four cards to highlight my most significant, meaningful work with special attention for the <a class="lin" href="#wo">work I am most proud of</a>.</p>
-	<br><br>
+	Limited to four cards to highlight my most significant, meaningful work.</p>
+	<br>
 		<div class="card" onclick="wo()">
 		  <img src="imgs/Placeholder.jpg" alt="Placeholder 1" class="CI">
 		  <div class="container">
 			<h4><b>Placeholder 1</b></h4> 
-			<p>A few examples of before and after</p> 
+			<p>Placeholder for future work</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wt()">
 		  <img src="imgs/Placeholder.jpg" alt="Placeholder 2" class="CI">
 		  <div class="container">
 			<h4><b>Placeholder 2</b></h4>
-			<p>A few examples of before and after</p> 
+			<p>Placeholder for future work</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wth()">
 		  <img src="imgs/Placeholder.jpg" alt="Placeholder 3" class="CI">
 		  <div class="container">
 			<h4><b>Placeholder 3</b></h4> 
-			<p>A few examples of before and after</p> 
+			<p>Placeholder for future work</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wf()">
@@ -123,10 +126,10 @@
 	<h3>MineS in C#</h3>
 	<p>One great thing about programming is that you can be as creative as you want.
 	<br>This is my adaptation of MineSweeper called <a id="li5" class="lin" href="docs/MineS Installer.zip">MineS (Installer)</a> written in C# which contains the normal game along with 6 other modes.
-	<br class="exc">Simply recreating MineSweeper would have achieved nothing new (no value, points of interest, or creativity).
+	Simply recreating MineSweeper would have achieved nothing new (no value, no points of interest, no creativity).
 	<br>Remove your expectations and you might be pleasantly surprised :)
 	<br><br>To play, download and unzip the installer. Run the installer; within the game folder is the application "MineS".
-	I have now added an <a href="https://kush-kotecha.github.io/MineS/" class="lin" target="_blank">online scoreboard</a> which also implements SQL and HTML, CSS, and JS.
+	I have now added an <a href="https://kush-kotecha.github.io/MineS/" class="lin" target="_blank">online scoreboard</a> which also implements SQL (database) and HTML, CSS, and JS (webpage).
 	<br><br>Future Updates: I have identified a memory-leak bug in game mode 5 ("Nuclear Decay"). I am also currently working to change the UI from coordinates to buttons (as is in the standard version of MineSweeper).</p>
 	<br><br id="ma"><br><br>
 	<h3>PBR in Matlab</h3>
@@ -149,42 +152,42 @@
 		<img src="imgs/Placeholder.jpg" alt="Placeholder 2" class="CI">
 		<div class="container">
 		  <h4><b>Placeholder 2</b></h4> 
-		  <p>A few examples of before and after</p> 
+		  <p>Placeholder for a future project</p> 
 		</div>
 	</div>
 	<div id="ct3" class="cartro" onclick="pth()">
 	   <img src="imgs/Placeholder.jpg" alt="Placeholder 3" class="CI">
 	   <div class="container">
 		  <h4><b>Placeholder 3</b></h4> 
-		  <p>A few examples of before and after</p> 
+		  <p>Placeholder for a future project</p> 
 	   </div>
 	</div>
 	<div id="ct4" class="cartbac" onclick="pf()">
 		<img src="imgs/Placeholder.jpg" alt="Placeholder 4" class="CI">
 		<div class="container">
 		  <h4><b>Placeholder 4</b></h4> 
-		  <p>A few examples of before and after</p> 
+		  <p>Placeholder for a future project</p> 
 		</div>
 	</div>
 	<div id="ct5" class="cartlt" onclick="pfi()">
 		<img src="imgs/Placeholder.jpg" alt="Placeholder 5" class="CI">
 		<div class="container">
 		  <h4><b>Placeholder 5</b></h4> 
-		  <p>A few examples of before and after</p> 
+		  <p>Placeholder for a future project</p> 
 		</div>
 	</div>
 	<div id="ct6" class="cartlo" onclick="ps()">
 	   <img src="imgs/Placeholder.jpg" alt="Placeholder 6" class="CI">
 	   <div class="container">
 		  <h4><b>Placeholder 6</b></h4> 
-		  <p>A few examples of before and after</p> 
+		  <p>Placeholder for a future project</p> 
 	   </div>
 	</div>
 	<div id="ct7" class="carthido" onclick="pse()">
 	   <img src="imgs/Placeholder.jpg" alt="Placeholder 7" class="CI">
 	   <div class="container">
 		  <h4><b>Placeholder 7</b></h4> 
-	      <p>A few examples of before and after</p> 
+	      <p>Placeholder for a future project</p> 
 		  </div>
 	</div>
 	</div>
