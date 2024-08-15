@@ -9,6 +9,7 @@
 	let navc = "pc1";
 	let clist = ["ct1", "ct2", "ct3", "ct4", "ct5", "ct6", "ct7"];
 	let plist = ["pag1", "pag2", "pag3", "pag4", "pag5", "pag6", "pag7"];
+	let ptlist = ["pag1t", "pag2t", "pag3t", "pag4t", "pag5t", "pag6t", "pag7t"];
 	let oclist = [po, pt, pth, pf, pfi, ps, pse];
 	let cnlist = ["cartinf", "cartrt", "cartro", "cartbac", "cartlt", "cartlo", "carthido"];
 	let indy = 0;
@@ -57,6 +58,10 @@
 			 cChang("cartbac", "box-Shadow", "0px 3px 10px 0 #0dd");
 			 cChang("carthido", "background-Color", "#353839");
 			 cChang("carthido", "box-Shadow", "0px 3px 10px 0 #0dd");
+			 unhigt();
+			 document.getElementById("pa1").style.display = "none";
+			 document.getElementById("pa2").style.display = "block";
+			 higt();
 			 const myTimeout = setTimeout(ret, btim);
 			 if (co!=0) {
 			 document.getElementById(ide).style.backgroundColor = "#333";
@@ -105,8 +110,11 @@
 			 cChang("cartbac", "box-Shadow", "");
 			 cChang("carthido", "background-Color", "");
 			 cChang("carthido", "box-Shadow", "");
+			 unhigt();
+			 document.getElementById("pa1").style.display = "block";
+			 document.getElementById("pa2").style.display = "none";
+			 higt();
 			 const myTimeout = setTimeout(ret2, btim);
-			 
 			 if (co!=0) {
 			 document.getElementById(ide).style.backgroundColor = "#333";
 			 document.getElementById(ide).style.color = "#cca01d";}	 
@@ -162,6 +170,8 @@
 		cChang("CI", "height", "39vh");
 		cChang("overlay-content", "top", "9%");
 		cChang("exc", "display", "none");
+		cChang("pagination", "left", "33%");
+		cChang("paginationt", "left", "33%");
 		document.getElementById("dc1b").style.cursor = "zoom-out";}
 	else
 		{lg = "n";
@@ -199,6 +209,8 @@
 		 cChang("CI", "height", "");
 		 cChang("overlay-content", "top", "");
 		 cChang("exc", "display", "");
+		cChang("pagination", "left", "");
+		cChang("paginationt", "left", "");
 		 document.getElementById("dc1b").style.cursor = "zoom-in";}
 	}
 	
@@ -551,11 +563,21 @@
 	}
 	
 	function unhigt() {
-	document.getElementById(plist[indy]).style.backgroundColor = "";
+		if(document.getElementById("pa1").style.display=="none"){
+		document.getElementById(ptlist[indy]).style.backgroundColor = "";
+		document.getElementById(ptlist[indy]).style.color = "";}
+		else{
+		document.getElementById(plist[indy]).style.backgroundColor = "";
+		document.getElementById(plist[indy]).style.color = "";}
 	}
 
 	function higt() {
-	document.getElementById(plist[indy]).style.backgroundColor = "#ddd";
+		if(document.getElementById("pa1").style.display=="none"){
+			document.getElementById(ptlist[indy]).style.backgroundColor = "#333";
+			document.getElementById(ptlist[indy]).style.color = "#cca01d";}
+		else{
+		document.getElementById(plist[indy]).style.backgroundColor = "#333";
+		document.getElementById(plist[indy]).style.color = "#cca01d";}
 	document.getElementById(clist[indy]).className = "cartinf";
 	let tindy = indy;
 	for(let j = 0; j < cnlist.length; j++){
