@@ -6,9 +6,10 @@
 <meta name="author" content="Kush Kotecha">
 <meta name="keywords" content="Kush, Kotecha, Epic, EPIC, Chemical, Engineering, Engineer, Bloatlord, Energy">
 <link rel="stylesheet" href="kStyle.css">
+<link rel="icon" type="image/x-icon" href="imgs/Thumb.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=MonteCarlo">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB Garamond">
-<title>Kush Kotecha Profile Page</title>
+<title>Kush Kotecha</title>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 	<div class="banner">
 	<div onload="st()" class="banner-text">
     <h1 id="htname">Kush Kotecha</h1>
-    <p id="htbot">Chemical Engineering Graduate</p>
+    <p id="htbot">Chemical Engineering Graduate (MEng)</p>
 	<img id="htimg" src="imgs/Placeholder.jpg">
     </div>
     </div>
@@ -43,7 +44,7 @@
 		<a id="a2" class="dropbtn" onmouseover="hn2()" onmouseout="hoff()">Work</a>
 		<div class="dropdown-content">
 		  <a id="dc3a" class="dc" href="#wo" onclick = "c2()" onmouseover="dcn3a()" onmouseout="hoff()" style="border-right: initial">Dissertation</a>
-		  <a id="dc3b" class="dc" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial">Utility Systems</a>
+		  <a id="dc3b" class="dc" href="#wo3" onclick = "c2()" onmouseover="dcn3b()" onmouseout="hoff()" style="border-right: initial; display: none;">Utility Systems</a>
 		  <a id="dc3c" class="dc" href="#mi" onclick = "c2()" onmouseover="dcn3c()" onmouseout="hoff()" style="border-right: initial">Miscellaneous I.</a>
 		</div>
 		</li>
@@ -55,8 +56,8 @@
 	<br id="about"><br><br><br>
 	<h1 id="hab">About</h1>
 	<p>Welcome to my profile page.
-	 I built this page as a way to showcase examples of my work in chemical engineering and other projects I have done in my spare time.
-	 I am particularly interested in utility systems, renewable energy, and process safety, although I am open to different opportunities.</p>
+	 I am a chemical engineering graduate from the University of Manchester with a passion for sustainable utility systems and renewable energy.
+	 I built this webpage to showcase my work in chemical engineering and other projects I have done in my spare time. As I progress through my career, I will continue to improve my standards and produce quality work - some of which I will share here.</p>
 	 Contact: <a id="em" class="lin" href="mailto:kush.kotecha.kk@gmail.com">kush.kotecha.kk@gmail.com</a><br id="wo2"><br><br id="wo1">
 	</div></div></center>
 	<h2 id="acc" style="text-align:center; color: white;">If the text above is difficult to read, try the accessibility features on the left side of the navigation bar; changes are automatically applied to the CV</h2>
@@ -65,26 +66,31 @@
 	
 	<div onmouseover="cid2()" onscroll="cid2()">
     <br id="wo">
-	<h1 style="padding-top: 30px; padding-bottom: 20px;">Work</h1>
+	<h1 style="padding-top: 2vw;">Work</h1>
 	<h3>Dissertation</h3>
-	<p>My dissertation topic was <a id="li0" class="lin" href="Wettability.pdf" target="_blank">Wettability of aqueous LiTFSI on graphite using Molecular Dynamics (currently not available)</a> in relation to energy storage systems.
-	<br><br>The initial report contains a discussion of sustainable energy storage technologies, including the different components within a supercapacitor and a focus on aqueous electrolytes.
-	Then there is a comparison of salts used in aqueous electrolytes and a brief look inside the operation of a supercapacitor containing LiTFSI (aq). 
+	<br>
+	<p style="display: inline-block; float: left; padding-right: -8vw;"><span><a id="post" href="docs/WettabilityPoster.pdf" target="_blank" style="display: inline-block; width: 25vw; height: 65vh; position: relative; top: -2vh;"><img src="imgs/WettabilityPoster.jpg" alt="Wettability Dissertation Poster" style="width: 100%; height: 100%;"></a></span>
+	<div style="padding-right: 4vw;">My dissertation topic was <a id="li0" class="lin" href="Wettability.pdf" target="_blank">Wettability of aqueous LiTFSI on graphite using Molecular Dynamics (currently unavailable)</a> in relation to energy storage systems.
+	<br><br>The initial report contains a discussion of different energy storage technologies from a sustainability perspective.
+	The focus is placed on aqueous electrolytes - in particular LiTFSI - as a cheaper, safer, and more environmentally friendly alternative to current materials such as LiPF&#x2086;.
+	Finally, there is a brief overview of how and why models are used.
 	<br><br>
 	The dissertation report contains Molecular Dynamics theory (for both background and simulation) and informative instructions on input creation.
 	There are 3 investigations which look at slightly different aspects of the system but all share the same goal of improving electrolyte performance.
-	<div id="li1" class="tt">Hover over this to read the dissertation abstract
+	<br><br><div id="li1" class="tt">Hover over this to read the dissertation abstract
 	<span class="disstt">This dissertation aims to understand the wetting properties of aqueous LiTFSI on an uncharged graphite electrode with respect to concentration, temperature, and surface type. Wetting is quantified by the contact angle between the droplet and electrode which is measured graphically using Python and qualitatively evaluated using Young’s Equation.
 	<br><br>A basic introduction to Molecular Dynamics is provided and the theory behind key components of the simulation have been discussed in detail. The procedure for input preparation is given along with all supplementary files required to completely reproduce simulation of a 6.00 molal droplet at 298K on a flat surface (appendix B).
 	<br><br>The results show that the contact angle of water droplets decreases significantly with the introduction of LiTFSI and then continues to decrease at a more subdued rate as further ions are added. Increasing temperature also causes the contact angle to decrease and evaporation of water further decreases the contact angle. At 75° and 100°C, and an initial concentration of 6.00 molal, perfect wetting is achieved. Contact angle results could not be drawn from the changes in surface however the simulations serve as a preliminary insight into intercalation of LiTFSI between graphite layers.
-	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (no potential difference or reactions modelled). Relevant market analysis is conducted and ideas for the future of LiTFSI are explored. Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
+	<br><br>The validity of these results is discussed and compared to existing experimental data with consideration for the limitations present within these simulations (notably the lack of potential difference and reactions). Relevant market analysis is conducted and ideas for the future of LiTFSI are explored. Further work includes identifying the individual effects of temperature, evaporation, and steam on the system, and a more detailed investigation of intercalation.
 	</span>
-	</div><br><span id="tip" style="color: #8c8c8c;" class="mag" onmouseout="op()">Tip: Keep the mouse on the link and scroll onto the textbox<br>You can resize the textbox from the bottom right corner</span></p>
+	</div><br><span id="tip" class="mag" onmouseout="op()">Tip: Keep the mouse on the link and scroll onto the textbox<br>You can resize the textbox from the bottom right corner</span></p></div>
+	<div style="display: none;">
 	<br id="wo3"><br><br>
 	<h3>Utility Systems</h3>
 	<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around sustainable energy, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
-	<br><br>I have attached some of my current energy system work: <br><a id="li3" class="lin" href="docs/USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> and <a id="li4" class="lin" href="docs/SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
+	<br><br>I have attached some of my current energy system work: <br><a class="lin" href="docs/USD-CW.pdf" target="_blank">Analysis and Optimisation of Utility System Model</a> and <a class="lin" href="docs/SES-CW.pdf" target="_blank">District Heat and Power Centre Feasibility Study</a> 
 	<br>Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
+	</div>
 	<br><br id="mi"><br><br>
 	<h3>Miscellaneous I.</h3>
 	<p>Currently, the cards below are empty. In the future, they will contain industry-relevant work.<br>
@@ -93,28 +99,28 @@
 		<div class="card" onclick="wo()">
 		  <img src="imgs/Placeholder.jpg" alt="Placeholder 1" class="CI">
 		  <div class="container">
-			<h4><b>Placeholder 1</b></h4> 
+			<h4><b>Placeholder no. one</b></h4> 
 			<p>Placeholder for future work</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wt()">
 		  <img src="imgs/Placeholder.jpg" alt="Placeholder 2" class="CI">
 		  <div class="container">
-			<h4><b>Placeholder 2</b></h4>
+			<h4><b>Placeholder no. two</b></h4>
 			<p>Placeholder for future work</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wth()">
 		  <img src="imgs/Placeholder.jpg" alt="Placeholder 3" class="CI">
 		  <div class="container">
-			<h4><b>Placeholder 3</b></h4> 
+			<h4><b>Placeholder no. three</b></h4> 
 			<p>Placeholder for future work</p> 
 		  </div>
 		</div>
 		<div class="card" onclick="wf()">
 		  <img src="imgs/UtilitySystem.jpg" alt="Utility Systems" class="CI">
 		  <div class="container">
-			<h4><b>Utility Systems</b></h4> 
+			<h4><b>Sustainable Utilities</b></h4> 
 			<p>Design and analysis of utility systems</p> 
 		  </div>
 		</div>
@@ -238,11 +244,14 @@
 		<a href="#">Link 2</a>
 	  </div>
 	  <div id="wc4" class="overlay-content">
-		<h1>Utility Systems</h1>
-		<br class="exc">
+		<h1>Sustainable Utilities</h1>
 		<p>In the final year of my Chemical Engineering degree, the majority of my modules were based around supplying utilities, all of which I thoroughly enjoyed: Utility System Design, Nuclear Fuel Cycle, and Sustainable Energy Systems.
-		<br><br><br class="exc">I have attached some of my current energy system work: <br><br><a href="docs/USD-CW.pdf" target="_blank">Analysis of Utility System Model and Optimisation</a> &amp; <a href="docs/SES-CW.pdf" target="_blank">District Heat + Power Centre Feasibility Study</a> 
-		<br><br class="exc">Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
+		I have attached some of my current energy system work which covers two main scenarios: improving existing systems so that they are more efficient and assessing available technologies for a new system.<br><br>
+		<a href="docs/USD-CW.pdf" target="_blank">Analysis and Optimisation of Utility System Model</a>
+		<p>The utility system model investigates an existing system which is improved by implementing additional units such as flash drums to produce steam for both heat and power to increase overall efficiency. Different configurations are evaluated and the final model is optimised.</p>
+		&amp; <a href="docs/SES-CW.pdf" target="_blank">District Heat and Power Centre Feasibility Study</a> 
+		<p>The district centre feasibility study compares sustainable technologies to supply heat and power demands. The main criteria include economics, environmental impacts, efficiencies, and thermal storage. Further considerations are given for the chosen technology such as social impacts and logistical issues.</p>
+		Both reports were conducted by the same group and contain my individual (in blue text) and team tasks.</p>
 	  </div>
 	</div>
 	

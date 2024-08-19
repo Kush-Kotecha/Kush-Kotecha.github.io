@@ -50,7 +50,7 @@
 	.banner img {
 	width: 20vw;
 	height: 35vh;
-	transform: translate(40vw, -30vh);
+	transform: translate(45vw, -30vh);
 	border-radius: 5px;
 	}
 
@@ -191,7 +191,6 @@
 	  text-align: left;
 	  padding: 5px 5px;
 	  border-radius: 6px;
-	  resize: both;
 
 	  /* Position the tooltip text */
 	  position: absolute;
@@ -208,7 +207,7 @@
 	.tt .disstt::after {
 	  content: "";
 	  position: absolute;
-	  top: 125%
+	  top: 125%;
 	  left: 50%;
 	  margin-left: -300px;
 	  border-width: 5px;
@@ -224,7 +223,8 @@
 	
 	.mag {
 	opacity: 0;
-	transition: opacity 0.2s linear 0.5s;}
+	transition: opacity 0.2s linear 0.5s;
+	color: #8c8c8c;}
 	
 	.mag:hover {
 	opacity: 1;}
@@ -285,7 +285,7 @@
 	.container p {
 	text-align: left;
 	padding: 0px 0px 0px 0px;
-	margin-top: -5px;
+	margin-top: -20px;
 	}
 	
 	.cartbac {

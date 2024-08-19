@@ -142,6 +142,8 @@
 		cChang("banner-text", "transform", "translate(10vw, -5vh)");
 		document.getElementById("htimg").style.transform = "translate(45vw, -33vh)";
 	    cChang("banner-text", "transition", "none");
+		document.getElementById("post").style.height = "90vh";
+		document.getElementById("post").style.width = "30vw";
 		document.getElementById("cla1").style.width = "90vw";
 		document.getElementById("cla11").style.width = "90vw";
 		document.getElementById("cla2").style.width = "90vw";
@@ -178,7 +180,9 @@
 		 txChange();
 		 document.body.style.fontSize = "";
 		 cChang("banner-text", "transform", "translate(15vw, 5vh)");
-		 document.getElementById("htimg").style.transform = "translate(40vw, -30vh)";
+		 document.getElementById("htimg").style.transform = "translate(45vw, -30vh)";
+		 document.getElementById("post").style.height = "65vh";
+		 document.getElementById("post").style.width = "25vw";
 		 document.getElementById("cla1").style.width = "";
 		 document.getElementById("cla11").style.width = "";
 		 document.getElementById("cla2").style.width = "";
