@@ -510,7 +510,8 @@
 	
 	function rig() {
 	unhigt();
-	if (indy < 6) {
+	if (indy < 6)//carousel index
+	{
 		indy++;}
 	else {indy = 0}
 	higt();
@@ -520,7 +521,7 @@
 	unhigt();
 	if (indy > 0) {
 		indy--;}
-	else {indy = 6}
+	else {indy = 6}//carousel index
 	higt();
 	}
 	
@@ -587,7 +588,9 @@
 	for(let j = 0; j < cnlist.length; j++){
 	  document.getElementById(clist[tindy]).className = cnlist[j];
 	  tindy++;
-	  if(tindy > 6){
+	  //reset counter once at end of list
+	  if(tindy > 6)//carousel index
+	  {
 	  tindy = 0;}
 	}
 	//oclist[indy]();
