@@ -1,7 +1,7 @@
 	body{
 	font-size: 120%;
 	background-color: #222;
-	font-family: "EB Garamond", Garamond, serif;
+	font-family: "Times New Roman", Serif;
 	margin: 0;
 	padding: 0;
 	}
@@ -14,6 +14,7 @@
 	font-size: 350%;
 	font-family: "MonteCarlo";
 	word-spacing: 2vw;
+	font-style: italic;
 	}
 	
 	#htbot{
@@ -38,7 +39,7 @@
 	
 	.banner {
 	 width: 98vw;
-	 height: 50vh;
+	 height: 40vh;
 	 overflow: hidden;
 	 background-color: #222;
 	 background-position: center;
@@ -67,7 +68,6 @@
 	  transition: transform 2s, opacity 3s;
 	  color: #cca01d;
 	  opacity: 0;
-	  font-style: italic;
 	  margin-right: 0px;
 	  margin-left: 0px;
 	}
@@ -152,7 +152,7 @@
 	}
 	
 	.b1 a, .b1t a {
-	 color: #af002a;
+	 color: #aa800b;
 	 font-style: oblique;
 	}
 	
@@ -176,8 +176,8 @@
 	.tt {
 	  position: relative;
 	  display: inline-block;
-	  color: #af002a;
-	  border-bottom: 1px dotted #af002a; /* If you want dots under the hoverable text */
+	  color: #aa800b;
+	  border-bottom: 1px dotted #aa800b; /* If you want dots under the hoverable text */
 	}
 
 	.tt .disstt {
@@ -254,7 +254,7 @@
 	  width: 20%;
 	  height: 50vh;
 	  border-radius: 5px;
-	  box-shadow: 3px 3px 10px 0 #af002a;
+	  box-shadow: 3px 3px 10px 0 #333;
 	  display: inline-block;
 	  margin: 0.75vw;
 	  filter: brightness(80%);
@@ -293,7 +293,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  position: fixed;
 	  left: 40%;
@@ -309,7 +309,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  left: 27.5%;
 	  bottom: 125px;
@@ -325,7 +325,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  position: fixed;
 	  left: 52.5%;
@@ -341,7 +341,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  left: 27.5%;
 	  bottom: 175px;
@@ -357,7 +357,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  position: fixed;
 	  left: 52.5%;
@@ -373,7 +373,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  position: fixed;
 	  left: 40%;
@@ -390,7 +390,7 @@
 	  width: 20%;
 	  height: 325px;
 	  border-radius: 5px;
-	  box-shadow: 0px 3px 10px 0 #af002a;
+	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
 	  visibility: hidden;
 	  position: fixed;

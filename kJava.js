@@ -16,7 +16,7 @@
 	
 	function st(){
 	  cChang("banner-text", "opacity", "1");
-	  cChang("banner-text", "transform", "translate(15vw, 5vh)");
+	  cChang("banner-text", "transform", "translate(15vw, 0vh)");
 	}
 
 	function invert() {
@@ -139,7 +139,7 @@
 		{lg = "y";
 		txChange();
 		document.body.style.fontSize = "160%";
-		cChang("banner-text", "transform", "translate(10vw, -5vh)");
+		cChang("banner-text", "transform", "translate(10vw, -8vh)");
 		document.getElementById("htimg").style.transform = "translate(45vw, -33vh)";
 	    cChang("banner-text", "transition", "none");
 		document.getElementById("post").style.height = "90vh";
@@ -179,7 +179,7 @@
 		{lg = "n";
 		 txChange();
 		 document.body.style.fontSize = "";
-		 cChang("banner-text", "transform", "translate(15vw, 5vh)");
+		 cChang("banner-text", "transform", "translate(15vw, 0vh)");
 		 document.getElementById("htimg").style.transform = "translate(45vw, -30vh)";
 		 document.getElementById("post").style.height = "65vh";
 		 document.getElementById("post").style.width = "25vw";
