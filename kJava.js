@@ -382,11 +382,11 @@
 	function revo() {
 	if (inv == "n"){
 		document.getElementById(ide).style.backgroundColor = "";
-		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.padding = "13.75px 18px";
 		document.getElementById(ide).style.color = "";}
 		else {
 		document.getElementById(ide).style.backgroundColor = "#401d49";
-		document.getElementById(ide).style.padding = "13.5px 18px";
+		document.getElementById(ide).style.padding = "13.75px 18px";
 		document.getElementById(ide).style.color = "white";}
 	}
 	
