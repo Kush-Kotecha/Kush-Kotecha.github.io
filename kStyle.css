@@ -18,7 +18,7 @@
 	}
 	
 	#htbot{
-	margin-top: -5vh;
+	margin-top: -7vh;
 	font-family: Georgia;
 	}
 	
@@ -131,7 +131,7 @@
 	}
 	
 	.b1 {
-	 box-shadow: 8px 8px 4px -4px rgba(0,0,0,0.3) inset;
+	 box-shadow: 12px 12px 6px -6px rgba(0,0,0,0.3) inset;
 	 width: 80vw;
 	 rotate: 180deg;
 	 position: relative;
@@ -139,7 +139,7 @@
 	}
 	
 	.b1t {
-	 box-shadow: 8px 0px 4px -4px rgba(0,0,0,0.3) inset;
+	 box-shadow: 12px 0px 6px -6px rgba(0,0,0,0.3) inset;
 	 width: 80vw;
 	 rotate: 180deg;
 	 position: relative;
@@ -157,7 +157,7 @@
 	}
 	
 	.b2 {
-	 box-shadow: 8px 0px 4px -4px rgba(0,0,0,0.3) inset;
+	 box-shadow: 12px 0px 6px -6px rgba(0,0,0,0.3) inset;
 	 width: 80vw;
 	 rotate: 180deg;
 	 position: relative;
@@ -252,9 +252,9 @@
 	.card {
 	  transition: 0.3s;
 	  width: 20%;
-	  height: 50vh;
+	  height: 55vh;
 	  border-radius: 5px;
-	  box-shadow: 3px 3px 10px 0 #333;
+	  box-shadow: 3px 3px 10px 0 #cca01d;
 	  display: inline-block;
 	  margin: 0.75vw;
 	  filter: brightness(80%);
@@ -269,8 +269,15 @@
 	
 	.CI {
 	width: 100%;
-	height: 31vh;
-	border-radius: 5px 5px 0 0;}
+	height: 36vh;
+	border-radius: 5px 5px 0 0;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%);}
+	
+	.CIt {
+	width: 100%;
+	height: 36vh;
+	border-radius: 5px 5px 0 0;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%);}
 
 	.container {
 	  text-align: left;
@@ -291,7 +298,7 @@
 	.cartbac {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
@@ -307,7 +314,7 @@
 	.cartlo {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
@@ -323,7 +330,7 @@
 	.cartro {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
@@ -339,7 +346,7 @@
 	.cartlt {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
@@ -355,7 +362,7 @@
 	.cartrt {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
@@ -371,7 +378,7 @@
 	.cartinf {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;
@@ -388,7 +395,7 @@
 	.carthido {
 	  transition: 1.5s ease-out;
 	  width: 20%;
-	  height: 325px;
+	  height: 54vh;
 	  border-radius: 5px;
 	  box-shadow: 0px 3px 10px 0 #333;
 	  display: block;

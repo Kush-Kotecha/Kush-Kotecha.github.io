@@ -34,8 +34,8 @@
 	  <li id="l3" class="dropdown">
 		<a id="a3" onmouseover="hn3()" onmouseout="hoff()" class="dropbtn">Projects</a>
 		<div class="dropdown-content">
-		  <a id="dc2a" class="dc" href="#pr" onclick="c3()" onmouseover="dcn2a()" onmouseout="hoff()" style="border-right: initial">C#</a>
-		  <a id="dc2b" class="dc" href="#ma" onclick = "c3()" onmouseover="dcn2b()" onmouseout="hoff()" style="border-right: initial">Matlab</a>
+		  <a id="dc2a" class="dc" href="#pr" onclick="c3()" onmouseover="dcn2a()" onmouseout="hoff()" style="border-right: initial">MineSweeper</a>
+		  <a id="dc2b" class="dc" href="#ma" onclick = "c3()" onmouseover="dcn2b()" onmouseout="hoff()" style="border-right: initial">PBR</a>
 		  <a id="dc2c" class="dc" href="#mit" onclick = "c3()" onmouseover="dcn2c()" onmouseout="hoff()" style="border-right: initial">Miscellaneous II.</a>
 		</div>
 	  </li>
@@ -141,25 +141,25 @@
 	</a>. Using a Mg-ZSM-5 catalyst, methanol and toluene preferentially react to form para-xylene over its meta- and ortho- isomers.
 	The model calculates the flowrate as a function of catalyst mass or reactor length and also allows the user to perform sensitivity analysis on a number of variables including temperature, pressure, diameter, and feed ratios.</p>
 	<br><br><br id="mit"><br>
-	<h3>Miscellaneous II.</h3>
-	<p>Here are some other projects I have worked on.</p>
+	<h3 id="mith">Miscellaneous II.</h3>
+	<br>
 	<div id="carousel">
 	<div id="ct1" class="cartinf" onclick="po()">
-	   <img src="imgs/PSLogo.jpg" alt="Photoshop" class="CI">
+	   <img src="imgs/Placeholder.jpg" alt="Photoshop" class="CIt">
 	   <div class="container">
-		  <h4><b>Photoshop</b></h4>
-	      <p>Different photoshop techniques</p> 
+		  <h4><b>Home Security</b></h4>
+	      <p>Door reinforcement design <i>(in progress)</i></p> 
 		  </div>
 	</div>
 	<div id="ct2" class="cartrt" onclick="pt()">
-		<img src="imgs/Placeholder.jpg" alt="Placeholder 2" class="CI">
+		<img src="imgs/PSLogo.jpg" alt="Placeholder 2" class="CIt">
 		<div class="container">
-		  <h4><b>Placeholder 2</b></h4> 
-		  <p>Placeholder for a future project</p> 
+		  <h4><b>Photoshop</b></h4> 
+		  <p>Different photoshop technqiues</p> 
 		</div>
 	</div>
 	<div id="ct3" class="cartro" onclick="pth()">
-	   <img src="imgs/Placeholder.jpg" alt="Placeholder 3" class="CI">
+	   <img src="imgs/Placeholder.jpg" alt="Placeholder 3" class="CIt">
 	   <div class="container">
 		  <h4><b>Placeholder 3</b></h4> 
 		  <p>Placeholder for a future project</p> 
@@ -253,10 +253,41 @@
 	</div>
 	
 	<div id="myNav2" class="overlay">
-	  <a id="cb2" href="#mit" class="closebtn" onclick="closeNavt()">&times;</a>
+	  <a id="cb2" href="#mith" class="closebtn" onclick="closeNavt()">&times;</a>
+	  <!-- When rearranging project order, switch id names around and change JS lines for navc onwards and change card img/description-->
 	  <div id="pc1" class="overlay-content">
+		<h1>Home Security</h1>
+	    <p>There are two aspects to home security: alarm systems and physical barriers
+		<br>An alarm system is a reactive defense and doesn't prevent any type of break-in, although any visible components may act as a deterrent.
+		<br>Reinforcing entry points can actually prevent someone who is trying to access your home from doing so. A significant percentage of break-ins are opportunists so making your home more difficult to enter also means a thief is more likely to move on.
+		<br>Typically break the door in because its quieter than breaking glass and less likely to cut them thus wounding and also leaving DNA.
+		<br><br>The points of weakness on a door are along both sides of the door frame (hinges and lock case). Ideally, the door should open inwards so that the hinges are not exposed to the outside. 
+		Additionally, a solid wood or metal door will provide better resistance than the cost-effective hollow doors that are typically used in construction.
+		<br><br>These reinforcements are strike plates attached to the door frame which are much cheaper than replacing doors thus it can be implemented sooner.
+		It also means that they won't restrict your options when it comes to changing your doors; a good solution is one that allows for future adaptations when opportunities for improvement are identified.</p>
+		<a href="https://www.youtube.com/watch?v=5h2xYwtnBXM&t=3s" target="_blank">Example installation video</a>
+		<p>The first step is to decide on the material to use. For this project, the most important material properties are: high tensile strength (less likely to fail/snap when the prying the door open), high corrosion resistance (maintains its properties - avoids oxidising and potentially becoming brittle etc.), and low malleability (retains its shape instead of stretching and forming weak points). Manufacturing conditions that promote rapid cooling give the highest strength and hardness.
+		Availability is also important - since the pieces are bespoke, I found a vendor that offered this service and compared the different materials they supplied; I chose to work with Cor-Ten steel.</p>
+		<a href="#">Link to Cor-Ten steel info</a>
+		<p>To attach the pieces to the frame, use screws - it is recommended to use 3-3.5" length screws but it's best to check the width of your door frame first in case you need shorter screws to ensure they will sit flush.
+		Replace all screws with these longer ones if necessary. The hinges and lock cases share a couple of the innermost screws with the strike plates, aligning and securing them both in place. Thus the screw diameter is determined by the existing screw sizes.
+		I chose screws with partial threading (where the upper portion of the screw has no threading carved into it) because it can withstand more strain before failure.
+		The screws are stainless steel as this is the most common material for screws and does the job well.</p>
+		<a href="https://cad.emachineshop.com/">Free, simple online CAD software</a>
+		<p>The designs for both the hinges and lock cases are similar. Measure the dimensions of the existing pieces and relative locations of the inner screws and box holes (lock cases).
+		Add an extra 5mm to either side of the plate and make sure that the plate fully extends to the outer edge of the frame. This allows you to add a lip (a further ~5mm) to the inner edge which will bend around the door frame.
+		This way, if the plate is being pried from the frame the lip will actually dig into the frame and provide additional resistance - use unrounded corners.
+		<br><br>The screw holes are the diameter of the thread, not the head, and enlarge the box holes by 1mm in all directions, remembering to encroach upon the existing space rather than extend the space to accomodate the additional sizing.
+		Then add centralised screw holes 25mm (hinge) or 50mm (lock case) above and below the nearest and leave a further 15mm from the top and bottom of the plate.
+		<br><br>The thickness of these plates is only 1mm which means it will easily fit between the existing gaps between the door and frame, and will make it easy to bend the lip manually.
+		Furthermore, the tensile strength is higher at lower thicknesses. The plates add an extra 50% to the thickness of the hinges/lock case and extend the length significantly (as well as points of contact).
+		It is wise to make prototypes out of paper to check that the measurements are correct (and mitigate lost funds and materials if they are not). Most companies will require a .dxf file from CAD software.</p>
+		<a href="#">Link to my design</a>
+		<p style="margin-bottom: 8%;">You can add a strike plate to the lock on the door, but add the lock case plate first in case the gap between the door and frame isn't big enough for both. The mortice lock itself is very strong and will break the frame before it fails hence the lock case plate is more important.
+	  </div>
+	  <div id="pc2" class="overlay-content">
 		<h1>Photoshop</h1>
-	    <p style="color:white">I decided to learn some basic image editing skills using photoshop. This included masking &amp; layers, curves &amp; levels for hues and exposure, and non-destructive editing (removing distractions &amp; fixing blemishes). 
+	    <p>I decided to learn some basic image editing skills using photoshop. This included masking &amp; layers, curves &amp; levels for hues and exposure, and non-destructive editing (removing distractions &amp; fixing blemishes). 
 		Below is a series of images taken around Chester and Wales on my trusty Huawei P20 Mate Pro; the photos were taken with the aim of implementing techniques from tutorials created by Aaron Nace of PHLEARN for which I have attached the link below.<br></p>
 	  </div>
 	  <div id="pc1i" style="">
@@ -308,15 +339,9 @@
 	  </div>
 	  </center>
 	  </div>
-	  <div id="pc2" class="overlay-content">
-		<h1>Placeholder 2</h1>
-	    <p style="color:white">PC2<br>Some description</p>
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-	  </div>
 	  <div id="pc3" class="overlay-content">
 		<h1>Placeholder 3</h1>
-	    <p style="color:white">PC3<br>Some content</p>
+	    <p>PC3<br>Some content</p>
 		<a href="#">Link 1</a>
 		<a href="#">Link 2</a>
 	  </div>

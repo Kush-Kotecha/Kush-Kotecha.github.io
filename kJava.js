@@ -152,7 +152,7 @@
 		document.getElementById("im").style.width = "510px";
 		document.getElementById("im").style.height = "260px";
 		document.getElementById("im").style.left = "50%";
-		cChang("card", "height", "66vh");
+		cChang("card", "height", "70vh");
 		cChang("card", "width", "22.5%");
 		cChang("b2t", "padding-bottom", "625px");
 		cChang("cartinf", "height", "66vh");
@@ -169,7 +169,8 @@
 		cChang("cartbac", "width", "22.5%");
 		cChang("carthido", "height", "66vh");
 		cChang("carthido", "width", "22.5%");
-		cChang("CI", "height", "39vh");
+		cChang("CI", "height", "44vh");
+		cChang("CIt", "height", "44vh");
 		cChang("overlay-content", "top", "9%");
 		cChang("exc", "display", "none");
 		cChang("pagination", "left", "33%");
@@ -211,6 +212,7 @@
 		 cChang("carthido", "height", "");
 		 cChang("carthido", "width", "");
 		 cChang("CI", "height", "");
+		 cChang("CIt", "height", "");
 		 cChang("overlay-content", "top", "");
 		 cChang("exc", "display", "");
 		cChang("pagination", "left", "");
@@ -440,16 +442,17 @@
 	function po(){
 	if (document.getElementById(clist[0]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
+	//switch around lines below when rearranging projects
 	navc = "pc1";
-	openNavt();
-	document.getElementById("pc1i").style.display = "";
-	document.getElementById("pc1b").style.display = "block";}}
+	openNavt();}}
 	
 	function pt(){
 	if (document.getElementById(clist[1]).className == "cartinf"){
 	document.getElementById(navc).style.display = "";
 	navc = "pc2";
-	openNavt();}}
+	openNavt();
+	document.getElementById("pc1i").style.display = "";
+	document.getElementById("pc1b").style.display = "block";}}
 	
 	function pth(){
 	if (document.getElementById(clist[2]).className == "cartinf"){
@@ -503,7 +506,7 @@
     function closeNavt() {
     document.getElementById("myNav2").style.height = "0vh";
 	document.getElementById(navc).style.display = "";
-	if(indy==0){
+	if(document.getElementById("pc1i").style.display == ""){
 	document.getElementById("pc1i").style.display = "none";
 	document.getElementById("pc1b").style.display = "";
 	}}
