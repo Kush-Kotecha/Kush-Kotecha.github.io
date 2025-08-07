@@ -525,8 +525,12 @@
 	/*HP Elitebook screen size is 14 inches (1344px) diagonally. Webpage designed for that so only need to make adjustments for large monitors or mobile and tablet screens*/
 	/*Special considerations for very large screens*/
 	@media screen and (min-width: 2000px) {
+		
 		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
 			width: 15%;}
+		
+		.navi {
+		font-size: 12px;}
 		
 		#hab {
 		left: 48%;}
@@ -548,7 +552,7 @@
 		font-size: 70%;}
 		
 		h1, h2, h3, h4, h5, h6 {
-		font-size: 70%;}
+		font-size: 100%;}/*or maybe can demote each header*/
 		
 		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
 			}
