@@ -1,3 +1,4 @@
+
 	body{
 	font-size: 120%;
 	background-color: #222;
@@ -25,7 +26,7 @@
 	.navi {
 	  list-style-type: none;
 	  margin: 0;
-	  padding: 0;
+	  padding: 0.25px;
 	  font-size: 18px;
 	  min-height: 48px;
 	  background-color: #808080;
@@ -38,7 +39,7 @@
 	}
 	
 	.banner {
-	 width: 98vw;
+	 width: 100%;
 	 height: 40vh;
 	 overflow: hidden;
 	 background-color: #222;
@@ -46,6 +47,7 @@
 	 background-repeat: no-repeat;
 	 background-size: cover;
 	 position: relative;
+	 border-color: transparent;
 	}
 	
 	.banner img {
@@ -520,7 +522,32 @@
 	top: 5vh;
 	}
 	
-	@media only screen and (min-width: 2000px) {
+	/*HP Elitebook screen size is 14 inches (1344px) diagonally. Webpage designed for that so only need to make adjustments for large monitors or mobile and tablet screens*/
+	/*Special considerations for very large screens*/
+	@media screen and (min-width: 2000px) {
+		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
+			width: 15%;}
+		
+		#hab {
+		left: 48%;}
+		
+		.pagination {
+		left: 38%;}
+		
+		.overlay-content {
+		top: 20%;}
+		
+		.overlay-content p{
+		padding-bottom: 15px;}
+	}
+	
+	/*Special considerations for mobile phone screens (6.1 inches or 586px) and tablet screens (10.1 inches or 970px)? - maybe need separate one for tablet*/
+	@media screen and (max-width: 1000px) {
+		
+		.body{
+		font-size: 80%;}
+		
+		
 		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
 			width: 15%;}
 		

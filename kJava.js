@@ -1,3 +1,4 @@
+
 	let ide = "a4";
 	let co = 0;
 	let inv = "n";
