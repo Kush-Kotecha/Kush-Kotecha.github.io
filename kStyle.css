@@ -553,7 +553,10 @@
 		
 				
 		.navi {
-		font-size: 12px;}
+		font-size: 12px;
+		padding: 0.25px;
+		font-size: 18px;
+		min-height: 30px;}
 		
 		.b1, .b1t, .b2, .b2t {
 		width: 90vw;}
