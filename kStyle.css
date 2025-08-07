@@ -110,7 +110,7 @@
 	.dropdown-content a {
 	  position: relative;
 	  color: black;
-	  padding: 0:
+	  padding: 0;
 	  text-decoration: none;
 	  display: block;
 	  text-align: left;
@@ -555,7 +555,6 @@
 		.navi {
 		font-size: 12px;
 		padding: 0.25px;
-		font-size: 18px;
 		min-height: 30px;}
 		
 		.b1, .b1t, .b2, .b2t {
