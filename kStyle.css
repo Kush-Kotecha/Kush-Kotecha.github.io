@@ -545,7 +545,8 @@
 	@media screen and (max-width: 1000px) {
 		
 		.body{
-		font-size: 80%;}
+		font-size: 80%;
+		color: yellow;}
 		
 		
 		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
