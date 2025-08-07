@@ -87,6 +87,11 @@
 			 cChang("lin", "color", "");
 			 cChang("b1", "background-color", "");
 			 cChang("b1t", "background-color", "");
+			 document.getElementById("dc1a").style.borderBottom = "";
+			 document.getElementById("dc2a").style.borderBottom = "";
+			 document.getElementById("dc2b").style.borderBottom = "";
+			 document.getElementById("dc3a").style.borderBottom = "";
+			 document.getElementById("dc3b").style.borderBottom = "";
 			 document.getElementById("li1").style.color = "";
 			 document.getElementById("li1").style.borderBottom = "";
 			 document.getElementById("tip").style.color = "#8c8c8c";
