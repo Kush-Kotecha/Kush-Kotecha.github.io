@@ -529,9 +529,6 @@
 		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
 			width: 15%;}
 		
-		.navi {
-		font-size: 12px;}
-		
 		#hab {
 		left: 48%;}
 		
@@ -553,6 +550,13 @@
 		
 		h1, h2, h3, h4, h5, h6 {
 		font-size: 100%;}/*or maybe can demote each header*/
+		
+				
+		.navi {
+		font-size: 12px;}
+		
+		.b1, .b1t, .b2, .b2t {
+		width: 90vw;}
 		
 		.card, .cartinf, .cartlo, .cartlt, .cartrt, .cartro, .cartbac, .carthido {
 			}
