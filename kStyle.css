@@ -545,7 +545,7 @@
 	}
 	
 	/*Special considerations for mobile phone screens (6.1 inches or 586px) and tablet screens (10.1 inches or 970px)? - maybe need separate one for tablet*/
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 600px) {
 		
 		body {
 		font-size: 70%;
