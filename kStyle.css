@@ -555,7 +555,8 @@
 		
 		.navi {
 		font-size: 12px;
-		padding: 0.25px;}
+		padding: 0.25px;
+		width: 100%;}
 		
         .navi li a, .dropbtn {
 	    padding: 13.9px 18px;
