@@ -232,7 +232,7 @@
 				document.getElementById("a4").href = "CVs/KushCVA.pdf";	
 			 }
 			 if (lg=="n" && inv == "n") {
-			    document.getElementById("acc").textContent = "If the text above is difficult to read, try the accessibility features on the left side of the navigation bar; changes are automatically applied to the CV";
+			    document.getElementById("acc").textContent = "If the text above is difficult to read, try the accessibility features on the left-hand side of the navigation bar.";
 			 	document.getElementById("a4").href = "CVs/KushCV.pdf";	
 			 }
 			 if (lg=="y" && inv == "n") {
