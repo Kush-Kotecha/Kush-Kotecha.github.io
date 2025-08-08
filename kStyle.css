@@ -545,13 +545,20 @@
 	}
 	
 	/*Special considerations for mobile phone screens (6.1 inches or 586px) and tablet screens (10.1 inches or 970px)? - maybe need separate one for tablet*/
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 400px) {
 		
 		body {
-		font-size: 70%;}
+		font-size: 70%;
+		color: yellow;}
 		
 		h1, h2, h3, h4, h5, h6 {
 		font-size: 100%;}/*or maybe can demote each header*/
+		
+		.banner{
+		height: 25vh;}
+
+		#htbot{
+		margin-top: 0vh;}
 		
 		.navi {
 		font-size: 12px;
@@ -586,6 +593,11 @@
 		
 		.overlay-content p{
 		padding-bottom: 15px;}
+	}
+	
+	@media screen and (max-width: 1000px) {
+		body{
+		color: red}
 	}
 
 	.img-comp-container {
