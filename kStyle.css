@@ -595,7 +595,7 @@
 		padding-bottom: 15px;}
 	}
 	
-	@media screen and (max-width: 1000px) {
+	@media screen and (min-width: 400px) and (max-width: 1000px) {
 		body{
 		color: red}
 	}
